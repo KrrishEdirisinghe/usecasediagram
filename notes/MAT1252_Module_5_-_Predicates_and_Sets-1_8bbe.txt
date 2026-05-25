@@ -1,0 +1,1826 @@
+Lecture 05
+Predicates & Sets
+
+1
+
+Outline
+
+01. Predicates and Propositions 
+02. Quantifiers
+03. Statements Negation
+04. Propositions with two quantifiers 
+05. Negation of a proposition with two quantifiers
+06. An algebraic derivation 
+07. Set Theory
+08. The Addition Principle 
+09. Laws of Sets 
+10. Illustration of laws using Venn diagrams 
+11. Analogy with logic concepts 
+12. Cartesian Product
+
+2
+
+Lecture’s Major Objectives
+
+After completing this section, students should be able to:
+
+•
+
+translate from a verbal statement involving universal and 
+existential quantifiers into a symbolic statement, and vice versa
+find the negations of quantified statements
+
+•
+• draw Venn diagrams to represent set expressions
+•
+•
+•
+•
+•
+• apply the Addition Principle
+
+find the complement of a set
+find the union and intersection of two sets
+find the Cartesian product of two sets and draw its graph
+find the power set of a set
+illustrate the equality of sets using Venn diagrams
+
+3
+
+Predicates and Propositions
+
+A predicate is a statement with one or more variables.
+
+If we assign values to the variables then the statement becomes a
+proposition, and has a truth value.
+
+Example
+"x > 20" is a predicate, and if x = 7 then "7 > 20" becomes a proposition.
+
+"x owns y cats" is a predicate, and if x = Peter and y = 3, then "Peter owns
+3 cats" becomes a proposition.
+
+More examples
+If we define  P(x): x + 5 = 12, then P(3) is false and P(7) is true.
+
+If we define  Q(x, y): the name x has y letters, then Q(John, 4) is true and 
+Q(Sam, 8) is false.
+
+4
+
+Sets and set notation
+
+A set is a collection of things, usually (but not necessarily) sharing some
+
+common attribute.
+
+E.g.  R = set of all people in this room = {Julia, David, Emily, Ali,…}
+E.g.  A = set of all letters in the alphabet = {a, b, c, d, …}
+E.g.  S = set of sheep that are also US presidents = ∅  empty set
+
+We use the symbol   to denote membership of a set.  
+The symbol ∈ is read "is a member of" or "is an element of" or
+"belongs to"
+
+g   A
+Julia Collins  R
+
+%   A
+Justin Brown   R
+
+5
+
+Special sets of numbers
+
+In maths we have some special sets of numbers.
+
+ℝ denotes the set of all real numbers (numbers 
+
+with a decimal point, e.g. 𝜋, 2, 0.12345).
+
+ℚ denotes the set of all rational numbers 
+
+(numbers that can be written as a ratio of 
+
+whole numbers p/q, i.e. fractions like 2/3)
+
+ℤ denotes the set of all integers, i.e. positive and 
+
+negative whole numbers, including zero = 
+
+{…, -3, -2, -1, 0, 1, 2, 3, 4, …}.
+
+ℕ denotes the set of all natural numbers, i.e. 
+
+positive whole numbers = {1, 2, 3, 4, …}.
+
+Rational 
+numbers
+
+Integers
+
+Natural 
+numbers
+
+Real 
+numbers
+
+Irrational 
+numbers
+
+6
+
+Quantifiers
+
+Instead of substituting particular values for the variables in predicates,
+we can make more general statements by using quantifiers.
+
+We will use two quantifiers:
+
+• Universal quantifier : “for all”, “for every”
+
+• Existential quantifier : “there exists”, “there is at least one”
+
+Quantifiers are used to link truth values of predicates to sets.
+
+A typical use of a quantifier is:
+
+• For every element of a set S, the predicate P is true: ∀ 𝑠 ∈ 𝑆, 𝑃(𝑠)
+
+• There is an element of a set S for which the predicate P is true: 
+
+∃ 𝑠 ∈ 𝑆, 𝑃(𝑠)
+
+7
+
+Universal quantifiers
+
+The universal quantifier  is used for statements of the type
+
+"All do … "
+
+or      "None do … "
+
+"All are … " or      "None are … “
+
+Example 1a
+
+If R = set of people in this room and the predicate C is C(x): x likes
+
+chocolate then: 
+
+ x  R, C(x)
+
+means  "Everybody in this room likes chocolate".
+
+Example 2a
+
+If the predicate D is D(x): x likes going to the dentist then: 
+
+ x  P, ~D(x) 
+
+means "Everybody here dislikes going to the dentist", or  "Nobody in
+
+this room likes going to the dentist".
+
+8
+
+Existential quantifiers
+
+The existential quantifier  is used for statements of the type
+
+"Some do … "
+
+or      "Some don't … "
+
+"Some are … " or      "Some are not … "
+
+Example 1b
+
+If R = set of people in this room and we define the predicate I as
+
+I(x): x speaks Italian then:  x  R, I(x)
+
+means "There is at least one person in this room who speaks Italian".
+
+Example 2b
+
+The statement
+
+ x  R, ~I(x)
+
+means "There is at least one person in this room who does not speak
+Italian".
+
+9
+
+More examples of quantifiers
+
+Example 3
+
+If we define the predicate  S(x): (x > 2)  (x < 7),  then:
+
+ x  ℕ, S(x)   
+
+means  "There is at least one natural number that is greater than 2 and
+
+less than 7".
+
+Example 4
+
+If we define the predicate  Q(x): (x < 5) ∨ (x ≥ 5),  then:
+
+ x  ℝ , Q(x)   
+
+means  “Every real number is either less than 5 or is greater than or 
+
+equal to 5".
+
+10
+
+Negation of quantifiers ()
+
+The negation of a statement is another statement that contradicts it.
+
+Example
+
+Consider the statement
+
+"All swans are black." We would contradict this by finding an
+
+example of a swan that was not black.
+
+In symbols: let S = set of swans, and B be the predicate B(x): Swan x is black.
+
+The statement “All swans are black: is  x  S, B(x)
+
+Its negation is “There exists a swan that is not black”, i.e.  x  S, ~B(x)
+
+So we have
+
+~( x  S, B(x))    x  S, ~B(x)
+
+Notice that the negation of  gives . 
+
+Or, put another way:
+
+▪ the opposite of "All do"  is "Some do not"
+
+▪ the opposite of "All are"  is "Some are not"
+
+11
+
+Negation of 
+
+Suppose R = Set of people in this room and define:
+
+P(x): person x is asleep
+
+Then the claim is:    x  R, P(x) (everyone in the room is asleep)
+
+and it is refuted by:  x  R, ~P(x) (there is someone in the room who is 
+
+not asleep)
+
+So the negation of claim  
+
+That is
+
+ x  R, P(x)  is   x  R, ~P(x). 
+
+~( x  R, P(x))    x  R, ~P(x)
+
+12
+
+Negation of quantifiers ()
+
+The negation of a statement is another statement that contradicts it.
+
+Example
+
+Consider the statement
+
+“There is a swan which is black." We would contradict this by
+
+showing that all of the swans are not black, i.e. that none of the swans are black.
+
+In symbols: let S = set of swans, and B be the predicate B(x): Swan x is black.
+
+The statement “There is a swan which is black: is  x  S, B(x)
+
+Its negation is “All swans are not black”, i.e.  x  S, ~B(x)
+
+So we have
+
+~( x  S, B(x))    x  S, ~B(x)
+
+Notice that the negation of  gives .
+
+Or, put another way:
+
+• The opposite of "Some do"  is  "None do"
+
+• The opposite of "Some are"  is  "None are"
+
+13
+
+Negation of 
+
+Suppose R = Set of people in this room and define:
+
+P(x): person x is asleep
+
+Then the claim is:  x  R, P(x) (someone in this room is asleep)
+
+and it is refuted by:  x  R, ~P(x) (everyone in this room is awake)
+
+So the negation of claim  
+
+That is
+
+ x  R, P(x) is  x  R, ~P(x).
+
+~( x  R, P(x))    x  R, ~P(x)
+
+14
+
+Summary of negating quantifiers
+
+Statement
+
+Negation
+
+Some don't 
+All do …
+Some are not …
+All are …
+Some do …
+None do …
+Some are … None are …
+
+15
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+➢ Some files are not binary.
+
+➢ Everybody likes ice cream.
+
+➢ Some students like Maths.
+
+➢ Nobody listens to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+16
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+
+➢ Everybody likes ice cream.
+
+➢ Some students like Maths.
+
+➢ Nobody listens to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+17
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+➢ Some students like Maths.
+
+➢ Nobody listens to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+18
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+
+➢ Nobody listens to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+19
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+No students like Maths.
+➢ Nobody listens to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+20
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+No students like Maths.
+➢ Nobody listens to Beethoven.
+
+Some people listen to Beethoven.
+
+➢ Some people do not eat curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+21
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+No students like Maths.
+➢ Nobody listens to Beethoven.
+
+Some people listen to Beethoven.
+
+➢ Some people do not eat curry.
+
+Everybody eats curry.
+
+➢ All rabbits are grey.
+
+➢ Not all dogs bite.
+
+22
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+No students like Maths.
+➢ Nobody listens to Beethoven.
+
+Some people listen to Beethoven.
+
+➢ Some people do not eat curry.
+
+Everybody eats curry.
+
+➢ All rabbits are grey.
+
+Some rabbits are not grey.
+
+➢ Not all dogs bite.
+
+23
+
+Statements Negation
+
+Negate each of the following statements:
+➢ All cars run on petrol.
+
+Some cars do not run on petrol.
+
+➢ Some files are not binary.
+All files are binary.
+
+➢ Everybody likes ice cream.
+
+Somebody does not like ice cream.
+
+➢ Some students like Maths.
+No students like Maths.
+➢ Nobody listens to Beethoven.
+
+Some people listen to Beethoven.
+
+➢ Some people do not eat curry.
+
+Everybody eats curry
+
+➢ All rabbits are grey.
+
+Some rabbits are not grey.
+
+➢ Not all dogs bite.
+All dogs bite.
+
+24
+
+Propositions with two quantifiers 
+
+Now we consider propositions with two quantifiers.
+
+Example
+
+Let P be a set of people and M a set of movies, and define the predicate
+S(x, y) to mean "person x has seen movie y".
+
+Consider the following symbolic statements:
+
+(i)
+
+ x  P,  y  M, S(x, y)
+
+which may be translated:
+
+"For each person x, there is some movie y such that x has seen y."
+
+or in simpler English:
+
+"Every person has seen at least one movie."
+
+25
+
+Propositions with two quantifiers 
+
+ x  P,  y  M, S(x, y) 
+
+(ii)
+which may be translated:
+"There is some person x such that for every movie y, x has seen y."
+or more simply: 
+"Some person has seen every movie."
+
+ x  P,  y  M, S(x, y)
+
+(iii)
+which may be translated:
+"There is some person x such that for some movie y, x has seen y."
+or in simpler English:
+"Some person has seen some movie."
+
+ x  P,  y  M, S(x, y)
+
+(iv)
+which may be translated:
+"For every person x and for every movie y, x has seen y."
+or more simply:
+"Every person has seen every movie."
+
+26
+
+Propositions with two quantifiers 
+
+ x  P,  y  M, S(x, y) 
+
+(ii)
+which may be translated:
+"There is some person x such that for every movie y, x has seen y."
+or more simply: 
+"Some person has seen every movie."
+
+ x  P,  y  M, S(x, y)
+
+(iii)
+which may be translated:
+"There is some person x such that for some movie y, x has seen y."
+or in simpler English:
+"Some person has seen some movie."
+
+ x  P,  y  M, S(x, y)
+
+(iv)
+which may be translated:
+"For every person x and for every movie y, x has seen y."
+or more simply:
+"Every person has seen every movie."
+
+26
+
+Propositions with two quantifiers 
+
+ x  P,  y  M, S(x, y) 
+
+(ii)
+which may be translated:
+"There is some person x such that for every movie y, x has seen y."
+or more simply: 
+"Some person has seen every movie."
+
+ x  P,  y  M, S(x, y)
+
+(iii)
+which may be translated:
+"There is some person x such that for some movie y, x has seen y."
+or in simpler English:
+"Some person has seen some movie."
+
+ x  P,  y  M, S(x, y)
+
+(iv)
+which may be translated:
+"For every person x and for every movie y, x has seen y."
+or more simply:
+"Every person has seen every movie."
+
+26
+
+Propositions with two quantifiers 
+
+ x  P,  y  M, S(x, y) 
+
+(ii)
+which may be translated:
+"There is some person x such that for every movie y, x has seen y."
+or more simply: 
+"Some person has seen every movie."
+
+ x  P,  y  M, S(x, y)
+
+(iii)
+which may be translated:
+"There is some person x such that for some movie y, x has seen y."
+or in simpler English:
+"Some person has seen some movie."
+
+ x  P,  y  M, S(x, y)
+
+(iv)
+which may be translated:
+"For every person x and for every movie y, x has seen y."
+or more simply:
+"Every person has seen every movie."
+
+26
+
+Propositions with two quantifiers 
+
+Notice that if we simply replace  by "for all" and  by "there exists", the
+resulting statement may be very awkward, and we may need to insert
+the phrase "such that" after  in order to obtain a reasonable sentence.
+
+Notice also that the order of the quantifiers is usually significant.  
+
+Using the above example again, " y  M,  x  P, S(x, y)"
+
+means there is at least one movie that every person has seen,
+
+whereas  " x  P,  y  M, S(x, y)" 
+
+means each person has seen at least one movie.
+
+We can see the difference if we assume that the diagram below shows
+which people have seen various movies.
+
+27
+
+Propositions with two quantifiers 
+
+For the situation shown on the diagram, the statement 
+
+ y  M,  x  P, S(x, y)
+
+is false, because there is no movie that everyone has seen,
+
+whereas the statement
+
+ x  P,  y  M, S(x, y)
+
+is true, since every person has seen at least one movie.
+
+M
+
+H
+
+G
+
+F
+
+A
+
+B
+
+C
+
+P
+
+28
+
+Negation of a proposition with two quantifiers
+
+Example
+
+Let 
+
+P = {A, B, C} be a set of people 
+
+and  M = {F, G, H} be a set of movies, 
+
+and consider the predicate 
+
+S(x, y) means "person x has seen movie y".
+
+To negate a proposition, change every  to  and 
+vice versa, and negate the final predicate. 
+
+29
+
+Negation of a proposition with two quantifiers
+
+(i) Negation of   
+
+Consider the claim:
+
+ x  P,  y  M, S(x, y)
+
+In simple English this is:
+
+M
+
+H
+
+G
+
+F
+
+"Every person has seen at least one movie."
+
+A
+
+B
+
+C
+
+P
+
+The negation of that claim is:  x  P,  y  M, S(x, y).
+
+There exists some person such that, for each movie, that person has 
+not seen the movie  
+
+or  there is some person who has not seen any movie. 
+
+( x  P,  y  M, S(x, y))    x  P,  y  M, S(x, y)
+
+30
+
+Negation of a proposition with two quantifiers
+
+(ii) Negation of    
+
+Consider the claim:
+
+ y  M,  x  P, S(x, y)
+
+In simple English this is:
+
+M
+
+H
+
+G
+
+F
+
+"There is some movie that everyone has seen."
+
+A
+
+B
+
+C
+
+P
+
+The negation of that claim is:  y  M,  x  P, S(x, y).
+
+For each movie there is someone who has not seen it  
+
+or no movie has been seen by everybody. 
+
+( y  M,  x  P, S(x, y))    y  M,  x  P, S(x, y)
+
+31
+
+Negation of a proposition with two quantifiers
+
+(i) Negation of   
+
+( x  P,  y  M, S(x, y))    x  P,  y  M, S(x, y)
+
+(ii)   Negation of    
+
+( y  M,  x  P, S(x, y))    y  M,  x  P, S(x, y)
+
+(iii) Negation of   
+
+( x  P,  y  M, S(x, y))    x  P,  y  M, S(x, y)
+
+(vi) Negation of   
+
+( y  M,  x  P, S(x, y))    y  M,  x  P, S(x, y)
+
+32
+
+An algebraic derivation 
+
+The laws for the negation of doubly-quantified propositions may be
+derived algebraically. 
+
+Examples
+
+Find the negation of each of the following propositions by:
+(i)
+(ii)
+(iii) translating the negated symbolic statement into simple English.
+
+translating the proposition into symbols,
+finding the negation of the symbolic statement
+
+1. For each movie there is some person who has seen it.
+2. Somebody has seen every movie.
+3. There is some movie that everyone has seen.
+
+33
+
+An algebraic derivation 
+
+For each movie there is some person who has seen it.
+
+1.
+(i)
+(ii)
+(iii)
+
+2. Somebody has seen every movie.
+(i)
+(ii)
+(iii)
+
+3. There is some movie that everyone has seen.
+(i)
+(ii)
+(iii)
+
+34
+
+An algebraic derivation 
+
+For each movie there is some person who has seen it.
+
+1.
+(i)  y  M,  x  P,  S(x, y)
+(ii)  y  M,  x  P, S(x, y)
+(iii) There is at least one movie that nobody has seen.
+
+2. Somebody has seen every movie.
+(i)
+(ii)
+(iii)
+
+3. There is some movie that everyone has seen.
+(i)
+(ii)
+(iii)
+
+35
+
+An algebraic derivation 
+
+For each movie there is some person who has seen it.
+
+1.
+(i)  y  M,  x  P,  S(x, y)
+(ii)  y  M,  x  P, S(x, y)
+(iii) There is at least one movie that nobody has seen.
+
+2. Somebody has seen every movie.
+(i)  x  P,  y  M,  S(x, y)
+(ii)  x  P,  y  M, S(x, y)
+(iii) Nobody has seen every movie.
+
+3. There is some movie that everyone has seen.
+(i)
+(ii)
+(iii)
+
+36
+
+An algebraic derivation 
+
+For each movie there is some person who has seen it.
+
+1.
+(i)  y  M,  x  P,  S(x, y)
+(ii)  y  M,  x  P, S(x, y)
+(iii) There is at least one movie that nobody has seen.
+
+2. Somebody has seen every movie.
+(i)  x  P,  y  M,  S(x, y)
+(ii)  x  P,  y  M, S(x, y)
+(iii) Nobody has seen every movie.
+
+3. There is some movie that everyone has seen.
+(i)  y  M,  x  P,  S(x, y)
+(ii)  y  M,  x  P, S(x, y)
+(iii) For each movie there is somebody who has not seen it. 
+
+37
+
+Things we learn 
+in MAT1252
+
+Things that 
+contain circles
+
+Number bases
+
+Olympic logo
+
+Truth tables
+
+Boolean algebra
+
+Venn 
+diagrams
+
+Audi logo
+
+Dart board
+
+Karnaugh maps
+
+Pepperoni pizza
+
+Set Theory - Sets 
+
+A set is a collection of things, usually (but not necessarily) sharing some
+common attribute.
+
+For example, you might be concerned with a set of files, a set of dates, a
+set of orders for a particular month, a set of customers, and so on.
+
+P = {Word, Excel, Powerpoint, Outlook}
+E = {2, 4, 6, 8, 10, …}
+S  =  {x | x is an even number < 18}
+D  =  {d | d is a date before 1 July}
+
+Recall that in maths we have some special sets of numbers
+
+ℕ denotes the set of all natural numbers = {1, 2, 3, 4, …}
+ℤ denotes the set of all integers = {0,  1,  2,  3,  4,…}
+ℝ denotes the set of all real numbers (numbers with a decimal point)
+
+38
+
+Specification of a set 
+
+There are various ways to specify a set.  
+For example, we can list the members of a set:
+
+{1, 2, 3, 4}
+{1, 2, 3, 4, …}
+{1, 2, 3, 4, …, 30}
+
+Or we can describe the members of the set
+
+{x | x is an odd number less than 10}
+{y  N | y > 5 and y < 13} 
+
+The order of the elements of a set is unimportant, so that {a, c, b} and
+{a, b, c} are the same set.
+
+Repetitions are unimportant, so the set {a, a, a, b, a, c, c, b} is the same
+as {a, b, c}.
+
+39
+
+The Universal Set and the Empty Set
+
+The universal set U is the set of all the things that we happen to
+
+be working with in a particular problem.
+
+It is sometimes convenient to talk about the empty set , or { }, which is
+
+a set that has no members.
+
+40
+
+Membership of a set
+
+The symbol  is read "is a member of" or "is an element of" or "belongs
+to"
+p  {p, q, r},         3  ℕ,       4.5  ℕ,          ℝ,       -1  ℝ
+
+Examples of sets and Venn diagrams
+
+U
+
+E
+
+T
+
+Example 1
+U = {1, 2, 3, …, 12}
+E = {even numbers}
+T = {numbers divisible by 3}
+Place each number in the appropriate region.
+
+41
+
+Membership of a set
+
+The symbol  is read "is a member of" or "is an element of" or "belongs
+to"
+p  {p, q, r},         3  ℕ,       4.5  ℕ,          ℝ,       -1  ℝ
+
+Examples of sets and Venn diagrams
+
+U
+
+1      5      7      11
+
+E
+
+2     4
+8    10
+
+T
+
+6
+12
+
+3     9
+
+Example 1
+U = {1, 2, 3, …, 12}
+E = {even numbers}
+T = {numbers divisible by 3}
+Place each number in the appropriate region.
+
+42
+
+Membership of a set
+
+Example 2:
+
+U = {animals}
+
+H = {animals with horns}
+
+M = {meat-eaters}
+
+S = {striped animals}
+
+Place in the appropriate subset: cow, horse, lion, tiger, zebra
+
+U
+
+S
+
+M
+
+H
+
+43
+
+Membership of a set
+
+Example 2:
+
+U = {animals}
+
+H = {animals with horns}
+
+M = {meat-eaters}
+
+S = {striped animals}
+
+Place in the appropriate subset: cow, horse, lion, tiger, zebra
+
+U
+
+S
+
+zebra
+
+horse
+
+M
+
+lion
+
+tiger
+
+cow
+
+H
+
+44
+
+Subsets
+
+We say that B is a subset of A, if every element of B is also an element 
+of A. In symbols B  A.
+
+Example: Let  A = {1, 2, 3, 4, 5},   B = {1, 3, 4},   C = {2, 4, 6} 
+
+A
+
+2
+
+5
+
+B
+
+1    3               4
+
+C
+
+6
+
+Clearly  B  A, since each element of B is also an element of A.
+Also clearly C is not a subset of A, since 6  C but 6  A.
+
+45
+
+Set operations:  Intersection
+
+A  B is the set of elements in both A and B.
+
+That is
+
+A  B = {x | (x  A)  (x  B)}
+
+A
+
+B
+
+If A and B have no elements in common, that is if  A  B = , then A
+and B are said to be disjoint.
+
+46
+
+Set operations: Union
+
+A  B is the set of elements in A or B, or both.  
+
+That is
+
+A  B = {x | (x  A)  (x  B) }
+
+A
+
+B
+
+47
+
+Set operations: Complement
+
+The complement of A is denoted by A' and  consists of all the
+
+elements of the universal set that are not in A.  
+
+That is
+
+A'  =  {x | x  U  x  A}
+
+A'
+
+A
+
+48
+
+Set operations - example
+
+A
+
+B
+
+A
+
+B
+
+A  B'
+
+A'  B  (A  B')'
+
+A
+
+B
+
+(A  B')  (A'  B)
+
+49
+
+Set operations - example
+
+A
+
+B
+
+A
+
+B
+
+C
+
+C
+
+A  B  C'
+
+A  (B  C)
+
+50
+
+Set operations - example
+
+A
+
+B
+
+A
+
+B
+
+C
+
+C
+
+A'  B'  C'
+
+(A  B)  C'
+
+51
+
+Set operations - example
+
+A
+
+B
+
+A
+
+B
+
+C
+
+C
+
+A'  B'  C'
+
+(A  B)  C'
+
+51
+
+Set operations - example
+
+A
+
+B
+
+A
+
+B
+
+C
+
+C
+
+C  (A  B)'  C  A'  B'
+
+(A  B')  (A  C)
+
+52
+
+The Addition Principle 
+
+Let n(A) denote the number of elements in set A.
+If set A has n(A) elements and set B has n(B) elements, then the
+number of elements in the union A  B is
+
+n(A  B) = n(A) + n(B) – n(A  B)
+
+This is called The Addition Principle.  
+
+From a Venn diagram we can see that if we add n(A) and n(B) then we
+will be counting n(A  B) twice.
+
+A
+
+B
+
+53
+
+The Addition Principle 
+
+If A and B are disjoint, that is, if A  B =  and hence n(A  B) = 0,
+then The Addition Principle becomes:
+
+n(A  B) = n(A) + n(B)
+
+Example 1
+Suppose that
+
+A = {multiples of 3 less than 32} 
+A = {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}, 
+
+and
+
+B = {multiples of 5 less than 32} 
+B = {5, 10, 15, 20, 25, 30}
+
+Then 
+
+A  B = {3, 5, 6, 9, 10, 12, 15, 18, 20, 21, 24, 25, 27, 30}
+
+By counting:
+
+n(A  B) = 14
+
+54
+
+The Addition Principle - Examples
+
+Example 2
+
+A = {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}
+B = {5, 10, 15, 20, 25, 30}
+A  B = {15, 30}
+
+n(A) = 10, n(B) = 6, n(A  B) = 2
+
+Using The Addition Principle:
+
+n(A  B) = n(A) + n(B) – n(A  B)
+
+= 10 + 6 – 2 = 14
+
+55
+
+The Addition Principle - Examples
+
+Example 3
+A = {multiples of 7 less than 50} 
+A = {7, 14, 21, 28, 35, 42, 49},
+and
+B = {multiples of 12 less than 50} 
+B = {12, 24, 36, 48}
+
+Then
+
+A  B = {7, 12, 14, 21, 24, 28, 35, 36, 42, 48, 49}
+
+By counting:
+
+n(A  B) = 11
+
+Alternatively, using the addition principle,
+n(A) = 7, n(B) = 4, n(A  B) = 0 (since A  B = ),
+
+n(A  B) = n(A) + n(B) – n(A  B)
+= 7 + 4 – 0 = 11
+
+56
+
+The Addition Principle - Examples
+
+Example 4
+
+In a group of 80 students, 27 play cricket, 45 play baseball, and 20 play
+neither cricket nor baseball.  
+
+Find how many play:
+(i) both cricket and baseball; 
+(ii) either cricket or baseball;
+(iii) baseball, but not cricket;
+(iv) cricket, but not baseball.
+
+57
+
+The Addition Principle - Examples
+
+Solution:
+
+Suppose that n(C  B) = x. Then, 
+since n(C) = 27,  n(C  B') must be 27 – x,
+and since  n(B) = 45,  n(C'  B) must be 45 – x.
+Adding the expressions in the diagram, we get
+(27 – x) + x + (45 – x) + 20 = 80
+92 – x = 80
+so x = 12, and from here it is easy to find the required numbers.
+
+27 – x
+
+x
+
+C
+
+(i) both cricket and baseball: 12
+(ii) either cricket or baseball: (27 – 12) + 12 + (45 – 12)  = 60
+(iii) baseball, but not cricket: 45 – 12 = 33
+(iv) cricket, but not baseball: 27 – 12 = 15
+
+B
+
+45 – x
+
+20
+
+58
+
+The Addition Principle - Examples
+
+Example 5 
+
+A poll of three TV shows, Rodeo, Starbus and Totem showed that in a
+group of 60 people, 26 watched Rodeo, 27 watched Starbus, 23
+watched Totem, 7 watched Rodeo and Starbus, 8 watched Rodeo and
+Totem, 11 watched Starbus and Totem, and 6 watched none of the
+shows.
+
+Find how many people watched:
+
+(i) all three shows;
+(ii) Rodeo and Starbus but not Totem;
+(iii) Starbus, but not the other two shows;
+(iv) only one of the three shows.
+
+59
+
+The Addition Principle - Examples
+
+Solution:
+
+We are given that:
+n(U) = 60
+n(R) = 26, n(S) = 27, n(T) = 23,
+n(R  S) = 7, n(R  T) = 8, n(S  T) = 11
+n(R'  S'  T') = 6
+Suppose that x people watch all three.
+Now refer to the diagram.
+Since n(R  S) = 7, it follows that
+
+n(R  S  T') = 7 – x
+
+Similarly,
+
+n(R  S'  T) = 8 – x
+
+and
+
+n((R'  S  T) = 11 – x
+
+R
+
+S
+
+11 + x
+
+7 – x
+
+9 + x
+
+x
+
+8 – x
+
+11 – x
+
+4 + x
+
+T
+
+6
+
+60
+
+The Addition Principle - Examples
+
+S
+
+9 + x
+
+R
+
+x
+
+8 – x
+
+7 – x
+
+11 – x
+
+11 + x
+
+Again, referring to the diagram, 
+n(R  S'  T') + (7 – x) + (8 – x) + x = 26
+and so
+n(R  S'  T') = 26 – (7 – x) – (8 – x) – x 
+= 11 + x
+Similarly n(R'  S'  T) = 4 + x
+And n(R'  S  T') = 9 + x
+Now, adding all the expressions in the diagram:
+(11 + x) + (7 – x) + (8 – x) + x + (4 + x) + (11 – x) + (9 + x) + 6 = 60
+which simplifies to 56 + x = 60 and so x = 4
+The answers are:
+(i) 4 watch all three shows;
+(ii) 3 watch Rodeo and Starbus but not Totem;
+(iii) 13 watch Starbus only;
+(iv) 36 watch only one of the three shows.
+
+4 + x
+
+15
+
+13
+
+R
+
+T
+
+S
+
+4
+
+3
+
+4
+
+7
+
+8
+
+6
+
+T
+
+6
+
+61
+
+Laws of Sets 
+
+The most important are the distributive laws:
+
+A  (B  C)  =  (A  B)  (A  C)
+A  (B  C)  =  (A  B)  (A  C) 
+
+and de Morgan's laws
+
+(A  B)'  =  A'  B'
+(A  B)'  =  A'  B'
+
+Notice that the laws are in pairs, and we can swap from a law to its dual
+(matching partner of the pair) by swapping  with , and U with .
+
+62
+
+Illustration of laws using Venn diagrams 
+
+Consider, for example, the law
+
+A  (B  C)  =  (A  B)  (A  C)
+
+We represent each side using a Venn diagram, and then check
+that the diagrams match.
+
+A
+
+B
+
+A
+
+B
+
+C
+
+C
+
+A
+
+B  C
+
+A  (B  C)
+
+A  B
+
+A  C
+
+all shaded: (A  B)  (A  C)
+
+63
+
+Illustration of laws using Venn diagrams 
+
+Another example:
+
+(A  B)'  =  A'  B'
+
+A
+
+B
+
+A
+
+B
+
+(A  B)'
+
+A'
+
+B'
+
+all shaded: A'  B'
+
+64
+
+Analogy with logic concepts 
+
+The laws are essentially the same, but are just presented differently.
+
+~(A  B)  ~A  ~B corresponds to (A  B)'  =  A'  B'
+~ corresponds to    '
+ corresponds to   
+ corresponds to   
+T  corresponds to   U
+F  corresponds to   
+
+65
+
+Power set of a set
+
+The power set of a set is the set of all subsets of the set.
+
+For example, if  S = {a, b}  then the power set of S is
+
+P(S)  =  {{ }, {a}, {b}, {a, b}}
+
+When creating a subset of a set, with each element we have the choice of
+whether to include it or not. So if the set has n elements, then it has 2n
+subsets.
+
+Example:
+
+Suppose there are three days of the week I can do yoga: Mon, Wed, Fri.
+
+I could choose to go to some, all or none of the yoga sessions. The 
+possibilities are: none,   M,  W,  F,  M&W,  M&F,  W&F  and all.
+
+In terms of sets, the choices are:
+
+{ }, {M}, {W}, {F}, {M, W}, {M, F}, {W, F}, {M, W, F}
+
+These are all the possible subsets of the set {M, W, F}, and therefore they
+comprise the power set of {M, W, F}.
+
+66
+
+Cartesian Product
+
+When working with graphs we talk about Cartesian coordinates.
+Each point is represented by an ordered pair of numbers; that is a pair
+of numbers where the order is important.
+So, for example, the point (2, 5) is different from the point (5,2).
+
+The Cartesian product of sets A and B, denoted by A  B, is the set of
+ordered pairs where the first member of the pair comes from A and the
+second from B.
+
+A  B  =  {(x, y) | x  A  and y  B}
+
+Example:
+Let  A = {Mon, Tues, Wed} 
+and  B = {am, pm}
+Then  
+
+B
+
+pm
+
+am
+
+A  B  =  {(Mon, am), (Mon, pm), (Tues, am ), … , (Wed, pm)}
+
+Mon       Tues        Wed         A
+
+67
+
+The End
+
+Lecture’s Major Objectives
+
+After completing this section, students should be able to:
+
+•
+
+translate from a verbal statement involving universal and 
+existential quantifiers into a symbolic statement, and vice versa
+find the negations of quantified statements
+
+•
+• draw Venn diagrams to represent set expressions
+•
+•
+•
+•
+•
+• apply the Addition Principle
+
+find the complement of a set
+find the union and intersection of two sets
+find the Cartesian product of two sets and draw its graph
+find the power set of a set
+illustrate the equality of sets using Venn diagrams
+
+75
+
+

@@ -1,0 +1,1313 @@
+Lecture 01
+Bases and Number 
+Representation
+
+1
+
+Outline
+
+01. The decimal number system  
+
+02. Use of subscripts
+
+03. The octal number system
+
+04. Counting in octal
+
+05. Conversion of octal to decimal
+
+06. Conversion from decimal to octal
+
+07. The binary number system
+
+08. Counting in binary
+
+09. Conversion from binary to decimal
+
+14. Conversion of binary numbers to 
+hexadecimal
+
+15. Conversion between hexadecimal and 
+decimal
+
+16. Representation of binary fractions
+
+17. Converting binary fractions to decimal
+
+18. Converting decimal fractions to binary
+
+19. Summary of number conversion
+
+20. Arithmetic using other number systems
+
+10. Conversion from decimal to binary
+
+21. Addition in octal
+
+11. The hexadecimal number system
+
+22. Addition in binary
+
+12. Counting in hexadecimal
+
+23. Addition in hexadecimal
+
+13. Conversion of hexadecimal 
+numbers to binary
+
+24. Binary Coded Decimal code (BCD)
+
+25. Addition of BCD numbers 
+
+2
+
+Lecture’s Major Objectives
+
+After completing this section, students should be able to:
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+count in each of the decimal, octal, binary and hexadecimal
+number systems
+
+convert integers between the number systems
+
+convert fractions between binary and decimal number systems
+
+perform addition in each of the number systems
+
+find the BCD code for a decimal number
+
+convert a BCD number to its decimal equivalent
+
+perform BCD additions, making any necessary decimal
+adjustments
+
+3
+
+Introduction
+
+Humans count on 10 fingers*…
+
+*in many, but not all, cultures
+
+4
+
+Introduction
+
+Computers count on switches!
+
+5
+
+Introduction
+
+Computers count on switches!
+
+This means we need to develop 
+a new type of  counting based 
+on 2s instead of  10s. 
+
+6
+
+The decimal number system
+
+We are familiar with the decimal number system, which is based on the
+number ten. The decimal system uses positional notation.
+
+For example
+
+"354" represents  (3  100) + (5  10) + (4  1) 
+= (3  102) + (5  10) + (4  1)
+
+whereas
+
+“2435" represents  (2 x 103) + (4  102) + (3  10) + (5  1).
+
+In the decimal system we use ten different symbols to represent
+numbers.
+
+These symbols are: 
+
+0, 1, 2, 3, 4, 5, 6, 7, 8 and 9
+
+7
+
+Different number systems
+
+There is nothing special about the decimal number system for 
+representing numbers! Civilisations around the world and throughout 
+history have chosen different bases to count in.
+
+The most common historical bases are those involving 5, 10 and 20.
+
+E.g. the Mayans of South America used base 20 to count. Each column 
+represents successive powers of 20, and they had symbols 0-19 to use 
+in each column.
+
+The most common bases for computers are 
+2, 8 and 16.
+
+E.g. base 2 is called binary. Each column represents
+a power of 2, and only the symbols 0 and 1 are needed.
+
+8
+
+Use of subscripts
+
+In MAT1252, we use different subscripts to indicate which number
+system we are using, and hence avoid ambiguity.
+
+For example
+
+35410
+
+3548
+
+10010102
+
+35416
+
+represents a decimal number (base 10)
+
+represents an octal number (base 8)
+
+represents a binary number (base 2)
+
+represents a hexadecimal number (base 16)
+
+9
+
+The octal number system
+
+The octal system is a positional system using base 8.
+
+Octal uses only the 8 symbols 0, 1, 2, 3, 4, 5, 6 and 7.
+
+(354)8 means (3  82) + (5  8) + (4  1)  which is equal to 23610 and
+
+(435)8 means (4  82) + (3  8) + (5  1) which is equal to 28510.
+
+10
+
+Octal number355477261Meaning3x8 + 5x15x8 + 4x17x8 + 7x12x82 + 6x8 +1x1Dec. equivalent294463177Counting in octal
+
+11
+
+1012...701...701...701...70811...122...700...706411...12Dec. Equiv012...789...151617...636465...127128Conversion of octal to decimal
+
+To convert
+represents a particular power of 8.
+
+from octal
+
+to decimal, we recall
+
+that each octal digit
+
+Example 1:
+
+Convert  2138 to decimal.
+
+2138 =  (2  82) + (1  8) + (3  1)
+
+=  (2  64) + (1  8) + (3  1) =  13910
+
+Example 2:
+
+Convert  4678 to decimal.
+
+4678 =  (4  82) + (6  8) + (7  1) 
+
+=  (4  64) + (6  8) + (7  1) =  31110
+
+12
+
+Conversion of octal to decimal
+
+Example 3:
+
+Convert  42768 to decimal.
+
+13
+
+Conversion of octal to decimal
+
+Example 3:
+
+Convert  42768 to decimal.
+
+42768 =  (4  83)  +  (2  82)  +  (7  8) +  (6  1) 
+
+=  (4  512) +  (2  64) +  (7  8) +  (6  1)
+
+=  223810
+
+14
+
+Conversion from decimal to octal
+
+The algorithm is: "Divide by 8 until the answer is 0, then read the 
+remainders in reverse order"
+
+Example:  Convert 17110 to octal.
+
+When we divide 171 repeatedly by 8, we get:
+
+The remainders, in reverse order, are:  2, 5 and 3.  
+So 17110 = 2538
+
+Why does this method work?
+171 = (21  8) + 3 and    
+21 = (2  8) + 5,  so 
+
+171 =  [(2  8) + 5]  8  + 3  
+therefore  171 = (2  82) + (5  8) + 3
+
+15
+
+8888171  21 + rem 3    2 + rem 5    0 + rem 2Conversion from decimal to octal
+
+Example:
+
+Convert  27810 to octal.
+
+So   27810 =  4268
+
+[ Check:   4268 =  (4  64) + (2  8) + (6  1)  =  27810 ]
+
+16
+
+8888278  34 + rem 6    4 + rem 2    0 + rem 4The binary number system
+
+The binary system is a positional system using base 2.
+In this system there are only two symbols, 0 and 1.
+
+So, for example, the binary number  101 represents
+
+(1  22) + (0  2) + (1  1)  =  5 in decimal
+
+and the binary number  1101 represents 
+
+(1  23) + (1  22) + (0  2) + (1  1)  =  13 in decimal
+
+Here are some binary numbers and their decimal equivalents:
+
+17
+
+Binary number111100111001110000000Meaning4+2+18+0+0+132+16+0+0+2+1128+0+...+0Dec. equivalent7951128Counting in binary
+
+18
+
+1010101010101010101010101010101012001100110011001100110011001100114000011110000111100001111000011118000000001111111100000000111111111600000000000000001111111111111111Dec. equiv012345678910111213141516171819202122232425262728293031Conversion from binary to decimal
+
+Method 1:  Write each number as the sum of powers of 2 
+
+Example 1:
+
+Convert  101110012 to decimal.
+
+101110012 =  27 + 25 + 24 + 23 + 1
+
+=  128 + 32 + 16 + 8 + 1  =  18510
+
+Example 2:
+
+Convert  1011110112 to decimal.
+
+1011110112 =  28 + 26 + 25 + 24 + 23 + 2 + 1
+
+=  256 + 64 + 32 + 16 + 8 + 2 + 1  =  37910
+
+Example 3:
+
+Convert  1111002 to decimal.
+
+1111002 =  25 + 24 + 23 + 22
+
+=  32 + 16 + 8 + 4  =  6010
+
+19
+
+Conversion from binary to decimal
+
+Method 1:  Write each number as the sum of powers of 2 
+
+Example 1:
+
+Convert  101110012 to decimal.
+
+101110012 =  27 + 25 + 24 + 23 + 1
+
+=  128 + 32 + 16 + 8 + 1  =  18510
+
+Example 2:
+
+Convert  1011110112 to decimal.
+
+1011110112 =  28 + 26 + 25 + 24 + 23 + 2 + 1
+
+=  256 + 64 + 32 + 16 + 8 + 2 + 1  =  37910
+
+Example 3:
+
+Convert  1111002 to decimal.
+
+1111002 =  25 + 24 + 23 + 22
+
+=  32 + 16 + 8 + 4  =  6010
+
+20
+
+Conversion from binary to decimal
+
+Method 2 
+three binary digits,
+1. Convert to octal by separating groups of
+starting at the units digit. Then replace each group of three binary digits
+by its octal equivalent.
+
+0
+1
+2
+3
+4
+5
+6
+7
+
+000
+001
+010
+011
+100
+101
+110
+111
+
+2. Convert from octal to decimal.
+
+21
+
+Conversion from binary to decimal
+
+Example 1 (again):
+
+Convert  101110012 to decimal. 
+
+10 | 111 | 001  =  2718 =  (2  64)  +  (7  8)  +  1  =  18510
+
+2      7       1
+
+Example 2 (again):
+
+Convert  1011110112 to decimal.
+
+101 111 011  =  5738 =  (5  64)  +  (7  8)  +  3  =  37910
+
+Example 3 (again):
+
+Convert  1111002 to decimal.
+
+111 100  =  748 =  (7  8)  +  4  =  6010
+
+22
+
+Conversion from binary to decimal
+
+Example 1 (again):
+
+Convert  101110012 to decimal. 
+
+10 | 111 | 001  =  2718 =  (2  64)  +  (7  8)  +  1  =  18510
+
+2      7       1
+
+Example 2 (again):
+
+Convert  1011110112 to decimal.
+
+101 111 011  =  5738 =  (5  64)  +  (7  8)  +  3  =  37910
+
+Example 3 (again):
+
+Convert  1111002 to decimal.
+
+111 100  =  748 =  (7  8)  +  4  =  6010
+
+23
+
+Conversion from decimal to binary
+
+Method 1: Divide by 2 until the answer is 0, then read the remainders in 
+reverse order.
+
+Example 1:
+
+Convert  5810 to binary.
+
+The remainders, in reverse order, are 1, 1, 1, 0, 1 and 0.  
+
+Therefore   5810 =  1110102
+
+[ Check:   1110102 =  32 + 16 + 8 + 0 + 2 + 0  =  5810 ]
+
+24
+
+2222225829 + rem 014 + rem 1  7 + rem 0  3 + rem 1  1 + rem 1  0 + rem 1Conversion from decimal to binary
+
+An alternative (and much quicker) method is to use octal.
+
+First you need to again remember
+numbers 0, 1, 2, …, 7.
+
+the binary equivalents of
+
+the
+
+These are:
+
+0
+1
+2
+3
+4
+5
+6
+7
+
+000
+001
+010
+011
+100
+101
+110
+111
+
+25
+
+Conversion from decimal to binary
+
+Method 2: First convert the decimal number to octal, and then 
+replace each octal digit by its binary equivalent.
+
+Example 1 (again):
+
+Convert  5810 to binary
+
+First convert to octal:
+
+Reading the remainders in reverse order, we find  5810 =  728
+
+Now replace each octal digit with the corresponding binary equivalent.
+
+(In this case replace 7 by 111 and replace 2 by 010)
+
+So  5810 =  728 =  1110102
+
+26
+
+888  58    7 + rem 2    0 + rem 7Conversion from decimal to binary
+
+Example 2:
+
+Convert 37010 to binary.
+
+First convert to octal:
+
+Now replace each octal digit with the corresponding binary equivalent.
+
+So  37010 =  5628 =  1011100102
+
+27
+
+8888370  46 + rem 2    5 + rem 6    0 + rem 5The hexadecimal number system
+
+This system is based on the number 16. Its main purpose is to help us
+to cope with long strings of binary digits. For example, suppose we
+had to remember the binary number:
+
+00101101111100111000110001001011
+
+We would find it much easier to work with its hexadecimal equivalent 
+
+2DF38C4B
+
+28
+
+1631162101610504153706Dec. equiv.2125987409670The hexadecimal number system
+
+The hexadecimal system is a positional system using base 16.
+Hexadecimal uses 16 symbols. The symbols 0, 1, 2, …, 9 have the
+same meaning as in decimal, and we need six extra symbols to
+represent these six numbers. We use A, B, C, D, E and F:
+
+A represents the decimal number 10,
+B represents the decimal number 11,
+C represents the decimal number 12,
+D represents the decimal number 13,
+E represents the decimal number 14, and
+F represents the decimal number 15.
+
+"5C" in hex represents  (5  16) + 12 = 92 in decimal.
+"1AF" in hex represents  (1  162) + (10  16) + (151) = 431 in decimal.
+
+29
+
+The hexadecimal number system
+
+Here are some more hexadecimal numbers and their decimal
+equivalents:
+
+(Note:  162 = 256 and 163 = 4096)
+
+30
+
+Hex. number2B7496FECB4DMeaning2x256 + 11x16 + 7x14x256 + 9x16 + 6x115x16 + 14x112x4096 + 11x256 + 4x16 +13x1Dec. equiv.695117425452045Counting in hexadecimal
+
+31
+
+1012...9A...F01...DEF0...F0...F0...F16000...00...011...1112...9A...F0...F162000...00...000...0000...00...01...F163000...00...000...0000...00...00...FDec. equiv.012...910...151617...29303132...159160...255256...65535Conversion of hexadecimal numbers to binary
+
+First we need to be familiar with the binary equivalents of
+hexadecimal numbers 0, …, F. These are:
+
+the
+
+Then it is simply a matter of replacing each hexadecimal digit by the
+corresponding four binary digits.
+
+32
+
+012345670000000100100011010001010110011189ABCDEF10001001101010111100110111101111Conversion of binary numbers to hexadecimal
+
+To convert a binary integer to hexadecimal, separate binary digits into
+groups of four, starting at the units digit, and then replace each group
+by its hexadecimal equivalent.
+
+Example 1:
+Convert   1011111010101100112 to hexadecimal.
+
+10  1111  1010  1011  00112 =  2FAB316
+
+Example 2:
+Convert   11111000010111011012 to hexadecimal.
+
+111  1100  0010  1110  11012 =  7C2ED16
+
+33
+
+Conversion between hexadecimal and decimal
+
+Sometimes it
+is convenient
+hexadecimal numbers to decimal, or vice versa.
+
+to be able to convert
+
+from simple
+
+For conversions such as these it helps to know, or at least be familiar
+with, the multiples of 16.
+
+Examples:
+
+1. The hex number 3C means  (316) + 12 = 60 in decimal.
+
+2. The hex number 54 means  (516) + 4 = 84 in decimal.
+
+3. The hex number  F6 means (1516) + 6 = 246 in decimal.
+
+34
+
+Conversion between hexadecimal and decimal
+
+4. To convert the decimal number 43 to hexadecimal:
+
+43 divided by 16?
+216 = 32, so
+43 divided by 16 gives 2 with remainder 11
+So 43 = (216) + 11
+
+Therefore 43 in decimal becomes 2B in hex.
+
+5. To convert the decimal number 77 to hexadecimal:
+
+77 divided by 16?
+416 = 64, so
+77 divided by 16 gives 4 with remainder 13 
+So 77 = (416) + 13
+
+Therefore 77 in decimal becomes 4D in hex.
+
+35
+
+Conversion between hexadecimal and decimal
+
+6. To convert the decimal number 103 to hexadecimal:
+
+103 divided by 16?
+616 = 96, so
+103 divided by 16 gives 6 with 7 remainder
+So 103 = (616) + 7
+
+Therefore 103 in decimal becomes 67 in hex.
+
+36
+
+Representation of binary fractions
+
+Now we consider fractions in binary. The concepts are analogous to
+those in the decimal system.
+In the decimal system, the columns to the right of the decimal point
+represent
+
+1
+10
+
+,
+
+1
+100
+
+,
+
+1
+1000
+
+, … and so on. 
+
+Here are some decimal numbers with both integer parts and fractional
+parts:
+
+37
+
+...100910481365001-----10203931-----100570921-----10001204...Meaning43.256.071985.3020.990.324.....Representation of binary fractions
+
+In decimal, for example
+
+1
+0.324  means                                              
+10
+
+1
+102 + 4 ×
+
++ 2 ×
+
+3 ×
+
+1
+103 =
+
+324
+1000
+
+Notice that the fraction 0.324 has 3 places after the decimal point so the
+
+last place represents
+
+1
+103.
+
+In the binary system, the columns to the right of the point represent 
+
+1
+2
+
+,
+
+1
+4
+
+,
+
+1
+8
+
+,
+
+1
+16
+
+… and so on. In other words, 
+
+1
+2
+
+,
+
+1
+22 ,
+
+1
+23 ,
+
+1
+24 , …
+
+38
+
+Representation of binary fractions
+
+Here are some binary numbers with both integer parts and fractional
+parts:
+
+39
+
+...412101101101----2110111----411111----8101----161...Binarymeaning1.10.1111.01101.1110.1101Decimalmeaning1.50.753.255.8750.8125.....Representation of binary fractions
+
+In the binary system, for example,
+
+0.11012 means                               or           =   0.8125 in decimal.
+
+Here the fraction 0.1101 has 4 places after the decimal point so the last
+
+place represents
+
+𝟏
+𝟐𝟒.
+
+Example  
+
+0.100112 means                           or           or 0.59375 in decimal
+
+40
+
+121408116+++131612116132++1932Converting binary fractions to decimal
+
+A simple method is: 
+1. Convert the fractional part (i.e. the number after the decimal place)
+to a decimal number.
+2. Divide your answer by the appropriate power of 2 as given by the
+number of places in the fractional part.
+
+Example 1:
+
+Convert  0.1100112 to decimal.
+
+1. The number after the point is  (110011)2 which is  51 in decimal.
+2. The fraction has 6 places, so we must divide by 26 = 64.
+
+Therefore  0.1100112 =           =  0.79687510
+
+51
+64
+
+41
+
+Converting binary fractions to decimal
+
+Example 2:
+
+Convert 0.111012 to decimal.
+
+1. The number after the point is (11101)2 = 2910
+2. The fraction has 5 places, so we must divide by 25 = 32.
+
+Therefore  0.111012 =        =  0.9062510
+
+29
+32
+
+Example 3:
+
+Convert  0.0010101012 to decimal. 
+
+1. The number after the point is (1010101)2 = 8510 .
+2. The fraction has 9 places, so we must divide by 29 = 512.
+
+Therefore  0.0010101012 =          =  0.16601562510
+
+85
+512
+
+42
+
+Converting binary fractions to decimal
+
+Example 4:
+
+Convert  0.000001012 to decimal. 
+
+1. The number 101 in binary is  5 in decimal.
+
+2. The fraction has 8 places, so we must divide by 28 = 256.
+
+Therefore  0.000001012 =          =  0.0195312510
+
+5
+256
+
+43
+
+Converting decimal fractions to binary
+
+Method
+Repeatedly multiply the digits to the right of the decimal point by 2,
+until only zeros remain. Then read the integer parts of the successive
+answers, from top to bottom.
+
+Example 1:  Convert the decimal fraction 0.34375 to binary.  
+
+So  0.3437510 =  0.010112
+
+44
+
+0.3437520.6875021.3750020.7500021.5000021.00000Converting decimal fractions to binary
+
+Example 2:
+
+Convert the decimal fraction 0.453125 to binary.
+
+So  0.45312510 =  0.0111012
+
+45
+
+0.45312520.90625021.81250021.62500021.25000020.50000021.000000Converting decimal fractions to binary
+
+Example 3:  Convert the decimal fraction 0.65625 to binary.
+
+So  0.6562510 =  0.101012
+
+46
+
+0.6562521.3125020.6250021.2500020.5000021.00000Summary of number conversion
+
+Conversion
+
+Method
+
+Example
+
+Binary to
+
+Octal
+
+Substitution
+
+10111011001 2 = 10 111 011 001 2 = 27318
+
+Hexadecimal Substitution
+
+10111011001 2 = 101 1101 10012 = 5D916
+
+Decimal
+
+Summation
+
+10111011001 2 = 1x1024 + 0x512 + 1x256
++ 1x128 + 1x64 + 0x32 + 1x16 + 1x8 +
+0x4 + 0x2 + 1x1 = 149710
+
+Octal to
+
+Binary
+
+Substitution
+
+12348 = 001 010 011 1002
+
+Hexadecimal
+
+Substitution
+
+12348 = 001 010 011 1002 = 0010 1001 11002 = 29C16
+
+Decimal
+
+Summation
+
+12348 = 1x512 + 2x64 + 3x8 + 4x1 = 66810
+
+47
+
+Summary of number conversion
+
+48
+
+ConversionMethodExampleHexadecimal toBinaryOctalDecimalSubstitutionSubstitutionSummationC0DE16 = 1100 0000 1101 11102C0DE16 = 1100 0000 1101 11102             = 1 100 000 011 011 1102 = 1403368C0DE16 = 12x4096 + 0x256 + 13x16 + 14x1 = 4937410Summary of number conversion
+
+“least significant bit”
+
+“most significant bit”
+
+49
+
+ConversionMethodExampleArithmetic using other number systems
+
+We are mainly concerned with the addition of two numbers. An example
+in the decimal system:
+
+In 1st column, 8 + 5 = 13, so we "put down 3 and carry the 1".
+In 2nd column, 3 + 8 + 1 = 12, we "put down 2 and carry the 1".
+In 3rd column, 1 + 2 + 4 = 7.
+
+50
+
+12471832583+Addition in octal
+
+Remember that in octal the digits represent 1, 8, 82, 83, and so on.
+So, if the sum of the two digits in the 1's column is 8 or more, there will
+be a carry of 1 into the next column, and so on.
+
+Example 1 :
+
+In 1st column, 78 + 58 (= 1210 = 8 + 4) = 148 , so the carry is 1.
+In 2nd column, 68 + 78 + 18 = 168, so the carry is 1.
+In 3rd column, 18 + 28 + 38 = 68.
+
+51
+
+12361766574+Addition in octal
+
+Example 2:
+
+In 1st column, 68 + 58 = 138 , so the carry is 1.
+In 2nd column, 48 + 38 + 18 = 108 , so the carry is 1.
+In 3rd column, 28 + 58 + 18 = 88 = 108, so the carry is 1.
+In 4th column, 28 + 48 + 18 = 78.
+
+52
+
+15201340653+1427Addition in binary
+
+Example 1:
+
+In 1st column, 1 + 1 = 10, so the carry is 1.
+In 2nd column, 0 +1 + 1 = 10, so the carry is 1.
+In 3rd column, 1 + 0 + 1 = 10 , so the carry is 1.
+In 4th column, 1 + 1 = 10 , so the carry is 1.
+
+53
+
+10101100110+11011Addition in binary
+
+Example 2:
+
+In 1st column, 1 + 1 = 10, so the carry is 1.
+In 2nd column, 1 + 0 + 1 = 10, so the carry is 1.
+In 3rd column, 1 + 1 + 1 = 11 , so the carry is 1.
+In 4th column, 0 + 1 + 1 = 10, so the carry is 1.
+In 5th column, 1 + 1 + 1 = 11 , so the carry is 1.
+
+54
+
+11111010110+1100111111Addition in binary
+
+Example 3:
+
+55
+
+110011101+101011111100101010111Addition in binary
+
+Example 3:
+
+56
+
+110011101+101011111100101010111Addition in hexadecimal
+
+In hexadecimal the digits represent 1, 16, 162, 163, and so on.
+So, if the sum of the two digits in the 1's column is 16 or more, there
+will be a carry of 1 into the next column, and so on.
+
+Examples:
+
+57
+
+639178+18925D2+111B739E7+113CFA5F+1AC7BD8+111C41CD9+11Addition in hexadecimal
+
+In hexadecimal the digits represent 1, 16, 162, 163, and so on.
+So, if the sum of the two digits in the 1's column is 16 or more, there
+will be a carry of 1 into the next column, and so on.
+
+Examples:
+
+58
+
+639178+18925D2+111B739E7+113CFA5F+1AC7BD8+111C41CD9+11Binary Coded Decimal code (BCD)
+
+In BCD code, each digit of a decimal number is represented by a 4-bit 
+binary "code group". This is easier than decimal for computers.
+
+Since there are 10 decimal digits, the 4-bit binary numbers for 0, 1, …, 9
+
+are used for BCD representation, as shown in the table.
+
+59
+
+decimaldigit0123456789BCDcode0000000100100011010001010110011110001001Binary Coded Decimal code (BCD)
+
+The remaining 4-bit binary numbers 1010, 1011, 1100, 1101, 1110 and
+1111, which represent A, B C, D, E and F in hexadecimal, do not
+correspond to any decimal digit, and are called "invalid BCD code
+groups".
+
+To convert from decimal to BCD we replace each decimal digit by its
+4-bit binary code group.
+
+Example 1:
+For the decimal number 37,  its BCD representation is     0011   0111
+
+
+
+3          7
+
+Note this is different to the binary representation, which is 100101.
+
+60
+
+Binary Coded Decimal code (BCD)
+
+Example 2:
+For the decimal number 65, the BCD representation is        0110   0101
+
+And the binary representation is  1000001.
+
+Example 3:
+For the decimal number 123, the BCD representation is       
+
+0001   0010   0011
+
+
+
+1         2         3
+
+And the binary representation is  1111011.
+
+
+
+6         5
+
+61
+
+Binary Coded Decimal code (BCD)
+
+Example 4:
+
+Fo the decimal number 478, the BCD representation is:
+
+4
+
+
+7
+
+0100         0111       1000
+
+8
+
+
+62
+
+Binary Coded Decimal code (BCD)
+
+Example 5:
+
+Consider the decimal number 345602. Its BCD representation is as
+shown:
+
+3
+
+
+4
+
+
+5
+
+
+6
+
+
+0
+
+
+2
+
+
+0011      0100       0101       0110     0000       0010
+
+Now we want to convert from BCD code back to decimal. 
+This is done by
+1. Separating the BCD number into groups of 4 bits
+2. Replacing each group by the corresponding decimal digit.
+
+63
+
+Binary Coded Decimal code (BCD)
+
+Example 6:
+Convert the BCD number 0101011100000001 into its decimal equivalent
+
+0101      0111       0000      0001
+
+
+5
+
+
+7
+
+
+0
+
+
+1
+
+Example 7:
+The binary sequence  0100 1011 0011  is NOT a valid BCD representation, 
+because when we try to convert it into its decimal equivalent, we find
+
+0100      1011       0011
+
+?
+
+
+4
+
+
+3
+
+We say 1011 is an invalid BCD code group.
+
+64
+
+Addition of BCD numbers
+
+In the following discussion about addition of BCD numbers it is much
+easier to use hexadecimal rather than binary representation.
+
+So valid BCD code groups are represented by the hex numbers 0, 1, 2,
+…, 9, while the hex numbers A, B, C, D, E and F represent invalid BCD
+code groups.
+
+When a microprocessor adds BCD numbers, it is really adding binary
+(or hex) numbers, but
+look like the result of
+the final output must
+decimal addition.
+
+Binary (or hex) additions may or may not look like decimal additions.
+
+65
+
+Addition of BCD numbers
+
+These three hex additions can be interpreted as correct decimal
+additions:
+
+However the following three hex additions do not give correct decimal
+answers:
+
+2   4
+3   6   +
+5   A
+
+7   5
+8   7   +
+F   C
+
+3   8
+3   9   +
+7   1
+
+66
+
+325549+134617+459325+Addition of BCD numbers
+
+When two BCD code groups are added, there are three possible types
+of outcomes as illustrated by the following three cases. Remember the
+additions are all hex:
+
+In case (i), if the result is interpreted as decimal, a correct answer is
+obtained.
+In case (ii) an invalid BCD code group is produced so the result cannot
+be interpreted as decimal.
+In case (iii), the result, if interpreted as decimal, gives a wrong answer.
+
+67
+
+347+67D+981+(i)(ii)(iii)1Addition of BCD numbers
+
+BCD addition means doing addition in hex but adjusting the answer so
+that it makes sense when the inputs are interpreted in decimal.
+
+The hexadecimal addition of the inputs and the decimal adjustments
+occur inside the machine and are therefore hidden from the user.
+
+Although all the calculations are in hex (or binary), as far as the user
+can see, the operation is simply decimal addition.
+
+The steps involved in BCD addition are shown in the following slide.
+Notice that the first addition and then the decimal adjustment on each
+column are completed before moving to the next column.
+
+68
+
+Addition of BCD numbers
+
+The procedure for BCD addition
+
+Start at the right hand column (note: we work on one column at a time):
+
+• Add the two digits and transfer any carry to the next column;
+
+• Make the decimal adjustment by adding 6 or 0, according to the rule:
+
+•
+
+If the sum of the two digits is more than 9, add 6
+
+• Otherwise add 0.
+
+• Add the two newly obtained digits of the column and transfer any
+
+carry to the next column.
+
+• Move to the next column and repeat the above operations, until all
+
+columns have been processed.
+
+Note that a carry may come from the first addition or from the second
+69
+addition.
+
+Addition of BCD numbers
+
+Example 1
+
+70
+
+12580818706646A60++{Input byuserUser interpretsoutput as decimalThe user does notsee these two rowsAddition of BCD numbers
+
+Example 2
+
+71
+
+132506148D6389167++{Input byuserUser interpretsoutput as decimalThe user does notsee these two rowsAddition of BCD numbers
+
+Some further examples:
+
+72
+
+4590915280886E64++459097070753808++135909163A6087F65++175D63146B6179066++1101127A6057C6236909++110119606684C6227909++1101Addition of BCD numbers
+
+More examples!
+
+73
+
+185E6417806637A60++11011780661010110890997066++110137A60176E64190A6067D63++12303157D63The End
+
+74
+
+

@@ -1,0 +1,1291 @@
+Lecture 02
+Symbolic Logic
+
+1
+
+Outline
+
+1. Today’s lecture objectives
+2. Propositions, connectives
+3. Compound propositions example
+
+4. Truth tables for compound propositions
+5. Tautologies and contradictions
+6. Logical equivalence
+
+7. De Morgan Laws and the Laws of Propositional Logic
+8. Conditional statements and contrapositives
+9. Arguments
+
+2
+
+Today’s Lecture Objectives
+
+After completing this section, students should be able to:
+
+•
+
+translate from a verbal statement into a symbolic statement, and
+vice versa
+
+• construct truth tables for logical expressions involving , ,  and
+
+→
+
+• use truth tables to establish logical equivalence of expressions
+• use the distributive laws and de Morgan's laws
+•
+•
+• use a truth table to establish the validity of an argument
+
+find the negations of statements involving  and 
+find the negations of conditional statements
+
+3
+
+Propositions, Connectives
+
+A proposition is a statement that is either true or false.  
+Here are some propositions:
+Simple representation:
+The file is being printed.
+The system is ready.
+The red light is on.
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+A compound proposition is built from simple propositions using
+connectives (sometimes also called "operators") including:
+
+Not
+And
+Or
+If then
+
+
+
+
+
+→
+
+Hence, symbolic logic translates verbal sentences into symbolic 
+expressions to make relationships easier to understand.
+
+4
+
+Propositions, Connectives
+
+A proposition is a statement that is either true or false.  
+Here are some propositions:
+Simple representation:
+The file is being printed.
+The system is ready.
+The red light is on.
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+A compound proposition is built from simple propositions using
+connectives (sometimes also called "operators") including:
+
+Not
+And
+
+•
+•
+• Or
+•
+
+If then
+
+
+
+
+→
+
+Hence, symbolic logic translates verbal sentences into symbolic 
+expressions to make relationships easier to understand.
+
+5
+
+Propositions, Connectives
+
+Examples of compound propositions:
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+If the system is ready and the red light is on then the file is printed.
+
+If the file is not printed then either the red light is not on or the
+system is not ready.
+
+Either the red light is on and the file is printed or the system is
+not ready.
+
+6
+
+Propositions, Connectives
+
+Examples of compound propositions:
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+If the system is ready and the red light is on then the file is printed.
+
+(q  r ) → p
+
+If the file is not printed then either the red light is not on or the
+system is not ready.
+
+~p → (~r  ~q)
+
+Either the red light is on and the file is printed or the system is
+not ready.
+
+(r  p)  ~q
+
+7
+
+Propositions, Connectives
+
+Examples of compound propositions:
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+If the system is ready and the red light is on then the file is printed.
+
+(q  r ) → p
+
+If the file is not printed then either the red light is not on or the
+system is not ready.
+
+~p → (~r  ~q)
+
+Either the red light is on and the file is printed or the system is
+not ready.
+
+(r  p)  ~q
+
+8
+
+Propositions, Connectives
+
+Examples of compound propositions:
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+If the system is ready and the red light is on then the file is printed.
+
+(q  r ) → p
+
+If the file is not printed then either the red light is not on or the
+system is not ready.
+
+~p → (~r  ~q)
+
+Either the red light is on and the file is printed or the system is
+not ready.
+
+(r  p)  ~q
+
+9
+
+Propositions, Connectives
+
+Examples of compound propositions:
+
+p:   The file is being printed.
+q:   The system is ready.
+r:   The red light is on.
+
+If the system is ready and the red light is on then the file is printed.
+
+(q  r ) → p
+
+If the file is not printed then either the red light is not on or the
+system is not ready.
+
+~p → (~r  ~q)
+
+Either the red light is on and the file is printed or the system is
+not ready.
+
+(r  p)  ~q
+
+10
+
+Compound propositions example
+
+Define the following propositions:
+
+p: Peter is driving his own car.
+
+a: Andrew is late.
+
+m: Max has caught the bus.
+
+Translate a compound proposition below into symbolic notation:
+
+Either Peter is driving his own car and Andrew is late or Max has not
+caught the bus.
+
+11
+
+Compound propositions example
+
+Define the following propositions:
+
+p: Peter is driving his own car.
+
+a: Andrew is late.
+
+m: Max has caught the bus.
+
+Translate a compound proposition below into a symbolic notation:
+
+Either (Peter is driving his own car and Andrew is late) or Max has not
+caught the bus.
+
+(p  a)  ~m
+
+12
+
+Compound propositions example
+
+Define the following propositions:
+
+p: Peter is driving his own car.
+
+a: Andrew is late.
+
+m: Max has caught the bus.
+
+Translate into simple English: 
+
+m  (p  a)
+
+13
+
+Compound propositions example
+
+Define the following propositions:
+p: Peter is driving his own car.
+a: Andrew is late.
+m: Max has caught the bus.
+
+Translate into simple English: 
+
+m  (p  a)
+
+Max has caught the bus and either Peter is not driving his own car or
+Andrew is not late.
+
+14
+
+Compound propositions example
+
+Define the following propositions:
+
+s: Sue is a geologist.
+
+a: Anne sells insurance.
+
+m: Mary teaches music.
+
+Write each of the following in symbols:
+
+If Mary teaches music then Sue is a geologist and also Anne does not
+
+sell insurance.
+
+15
+
+Compound propositions example
+
+Define the following propositions:
+
+s: Sue is a geologist.
+
+a: Anne sells insurance.
+
+m: Mary teaches music.
+
+Write each of the following in symbols:
+
+If Mary teaches music then Sue is a geologist and also Anne
+
+does not sell insurance.
+
+m → (s  ~a)
+
+16
+
+Compound propositions example
+
+Translate into simple English: 
+
+~s → (m  a)
+
+s: Sue is a geologist.
+
+a: Anne sells insurance.
+
+m: Mary teaches music.
+
+17
+
+Compound propositions example
+
+Translate into simple English: 
+
+~s → (m  a)
+
+s: Sue is a geologist.
+
+a: Anne sells insurance.
+
+m: Mary teaches music.
+
+If Sue is not a geologist then Mary does not teach music and Anne
+does not sell insurance. 
+
+18
+
+Truth Table
+
+A truth table shows all the possible combinations of the
+simple propositions and the corresponding truth values of
+the compound proposition.
+A truth value of 1 indicates that a statement is true (T).
+A truth value of 0 indicates that a statement is false (F).
+
+To be able to use truth tables as an important tool, we first
+have to define connectives.
+
+19
+
+The NOT connective
+
+NOT - the simplest operation denoted by the symbol "".  
+
+p is read as “not p”  or “It is not true that p”.
+
+For example if p means "Today is Saturday", then  
+
+p means "It is not true that today is Saturday", 
+
+or in simpler English, "Today is not Saturday.“
+
+For example:
+
+p:  3 + 4 = 7
+
+p:  3 + 4  7
+
+q:  It is raining
+
+q:  It is not raining.
+
+r:  8 > 15
+
+r:  8  15
+
+20
+
+The NOT connective
+
+NOT - the simplest operation denoted by the symbol "".  
+
+p is read as “not p”  or “It is not true that p”.
+
+For example if p means "Today is Saturday", then  
+
+p means "It is not true that today is Saturday", 
+
+or in simpler English, "Today is not Saturday.“
+
+For example:
+
+p:  3 + 4 = 7
+
+p:  3 + 4  7
+
+q:  It is raining
+
+q:  It is not raining.
+
+r:  8 > 15
+
+r:  8  15
+
+Note: Exactly ONE of p 
+and ~p is true.
+
+21
+
+p01~p10NOT Truth TableThe NOT connective
+
+NOT - the simplest operation denoted by the symbol "".  
+
+p is read as “not p”  or “It is not true that p”.
+
+For example if p means "Today is Saturday", then  
+
+p means "It is not true that today is Saturday", 
+
+or in simpler English, "Today is not Saturday.“
+
+For example:
+
+p:  3 + 4 = 7
+
+p:  3 + 4  7
+
+q:  It is raining
+
+q:  It is not raining.
+
+r:  8 > 15
+
+r:  8  15
+
+Note: Exactly ONE of p 
+and ~p is true.
+
+22
+
+p01~p10NOT Truth TableThe AND connective
+
+p  q 
+
+AND
+"AND" carries with it the expectation of both.
+
+is read as    "p and q“
+
+An AND statement is true if both parts are true; otherwise it is false.
+
+23
+
+p0011q0101p    q0001AND Truth TableThe OR connective
+
+OR p  q is read as "p or q"
+An OR statement is true if at least one part is true, and it is
+also true if both parts are true.
+
+An OR statement is false if both parts are false; otherwise it is true.
+
+24
+
+p0011q0101p    q0111OR Truth TableThe OR connective
+
+OR p  q is read as "p or q"
+An OR statement is true if at least one part is true, and it is
+also true if both parts are true.
+
+Note:
+OR is different to XOR 
+(“exclusive or”). An 
+XOR statement is true 
+if exactly one part is 
+true.
+
+An OR statement is false if both parts are false; otherwise it is true.
+
+25
+
+p0011q0101p    q0111OR Truth TableTruth tables for compound propositions
+
+Let us construct the truth table for  p  (q  r)
+
+Step 1 Build the table and list all  the possible       Step 2 Fill column by column according  to 
+
+combinations  for the number of                                           relation defined for the particular column
+
+existing propositions 
+
+26
+
+p00001111q00110011r01010101~rq    ~rp    (q    ~r)Truth tables for compound propositions
+
+Let us construct the truth table for  p  (q  r)
+
+Step 1 Build the table and list all  the possible       Step 2 Fill column by column according  to 
+
+combinations  for the number of                                           relation defined for the particular column
+
+existing propositions 
+
+27
+
+p00001111q00110011r01010101~rq    ~rp    (q    ~r)p00001111q00110011r01010101~r10101010q    ~rp    (q    ~r)p01~p10Truth tables for compound propositions
+
+Let us construct the truth table for  p  (q  r)
+
+Step 3 Continue filling columns 
+
+Step 4 Fill  final column
+
+28
+
+p00001111q00110011r01010101~r10101010q    ~r10111011p    (q    ~r)p0011q0101p    q0111Truth tables for compound propositions
+
+Let us construct the truth table for  p  (q  r)
+
+Step 3 Continue filling columns 
+
+Step 4 Fill final column
+
+29
+
+p00001111q00110011r01010101~r10101010q    ~r10111011p    (q    ~r)p0011q0101p    q0111p00001111q00110011r01010101~r10101010q    ~r10111011p    (q    ~r)00001011p0011q0101p    q0001Truth tables example
+
+Construct the truth table for the following proposition:
+
+((p  q) → r)  (p → r) 
+
+30
+
+Truth tables example
+
+Construct the truth table for the following proposition:
+
+((p  q) → r)  (p → r) 
+
+31
+
+p00001111q00110011r01010101~q11001100p    ~q00001100(p    ~q)     r11110111~p11110000~r10101010~p      ~r10101111((p    ~q)     r)    (~p     ~r)10100111Tautologies and contradictions
+
+A proposition that is true for every combination of truth values is 
+called a tautology. 
+
+The proposition ( p  q )  ( ~ p  ~ q)  is a tautology
+
+Step 1 
+
+Final step 
+
+32
+
+Tautologies and contradictions
+
+A proposition that is true for every combination of truth values is 
+called a tautology. 
+
+The proposition ( p  q )  ( ~ p  ~ q)  is a tautology
+
+Step 1 
+
+“Julia is here, or Julia is not here.”
+
+Final step 
+
+33
+
+Tautologies and contradictions
+
+A proposition that is true for every combination of truth values is 
+called a tautology. 
+
+The proposition ( p  q )  ( ~ p  ~ q)  is a tautology
+
+Step 1 
+
+Final step 
+
+34
+
+Tautologies and contradictions
+
+A proposition that is true for every combination of truth values is 
+called a tautology. 
+
+Claim: The proposition ( p  q )  ( ~ p  ~ q)  is a tautology
+
+Step 1 
+
+Final step 
+
+35
+
+p0011q0101p    q~p    ~q(p    q)    (~p    ~q)Tautologies and contradictions
+
+A proposition that is true for every combination of truth values is 
+called a tautology. 
+
+Claim: The proposition ( p  q )  ( ~ p  ~ q)  is a tautology
+
+Step 1 
+
+Final step 
+
+36
+
+p0011q0101p    q~p    ~q(p    q)    (~p    ~q)p0011q0101p    q0111~p    ~q1000(p    q)    (~p    ~q)1111Tautologies and contradictions
+
+A proposition that is false for every possible combination of truth 
+values is called a contradiction. 
+
+The proposition (p  q)  (p  q)  is a contradiction.
+
+Step 1 
+
+Final step 
+
+37
+
+Tautologies and contradictions
+
+A proposition that is false for every possible combination of truth 
+values is called a contradiction. 
+
+The proposition (p  q)  (p  q)  is a contradiction.
+
+Step 1 
+
+“Julia is here and Julia is not here.”
+
+Final step 
+
+38
+
+Tautologies and contradictions
+
+A proposition that is false for every possible combination of truth 
+values is called a contradiction. 
+
+The proposition (p  q)  (p  q)  is a contradiction.
+
+Step 1 
+
+Final step 
+
+39
+
+Tautologies and contradictions
+
+A proposition that is false for every possible combination of truth 
+values is called a contradiction. 
+
+Claim: The proposition (p  q)  (p  q)  is a contradiction.
+
+Step 1 
+
+Final step 
+
+40
+
+p0011q0101p    q~p    ~q(p    q)    (~p    ~q)Tautologies and contradictions
+
+A proposition that is false for every possible combination of truth 
+values is called a contradiction. 
+
+Claim: The proposition (p  q)  (p  q)  is a contradiction.
+
+Step 1 
+
+Final step 
+
+41
+
+p0011q0101p    q~p    ~q(p    q)    (~p    ~q)p0011q0101p    q0001~p    ~q1110(p    q)    (~p    ~q)0000Logical equivalence
+
+We often have different, but equivalent, logical expressions.
+
+To determine whether two given propositions have exactly the same
+logical meaning we use a truth table to check it.
+
+Equivalent statements have the same truth table.
+
+Logical equivalence is denoted by the symbol  .
+
+Show that      p  ( p   q )    ( p  q )
+
+LHS
+
+RHS
+
+42
+
+p0011q0101~p~qp    ~q~p    (p    ~q)p    q~(p    q)Logical equivalence
+
+Show that      p  ( p   q )   ( p  q )
+
+Two given propositions  p  ( p   q )   ( p  q ) are logically
+equivalent.
+
+43
+
+p0011q0101~p1100~q1010p    ~q1011~p    (p    ~q)1000p    q~(p    q)p0011q0101~p1100~q1010p    ~q1011~p    (p    ~q)1000p    q0111~(p    q)1000Truth tables example
+
+Use a truth table to show that :
+
+p  (q  r)  (p  q)  (p  r) 
+
+44
+
+Truth tables example
+
+Use a truth table to show that :
+
+p  (q  r)  (p  q)  (p  r) 
+
+45
+
+p00001111q00110011r01010101q    r01110111p    q00000011(p    q)    (p    r)00000111p    (q    r)00000111p    r00000101De Morgan’s laws
+
+De Morgan’s laws show how to negate statements that contain an AND 
+or an OR.
+
+Short story: 
+
+Negation of AND
+
+Negation of OR
+
+OR 
+
+AND
+
+46
+
+The negation of an AND statement
+
+One of de Morgan's laws defines the negation of an AND statement:
+
+NOT ( p AND q )  NOT p OR NOT q
+~(p  q)  ~p  ~q
+
+47
+
+p0011q0101~p1100~q1010p    q0001~p    ~q~(p    q)p0011q0101~p1100~q1010p    q0001~p    ~q1110~(p    q)1110The negation of an OR statement
+
+The second of de Morgan's laws:
+
+NOT( p OR q )  NOT p AND NOT q
+~(p  q)  ~p  ~q
+
+48
+
+p0011q0101~p1100~q1010p    q0111~p    ~q~(p    q)p0011q0101~p1100~q1010p    q0111~p    ~q1000~(p    q)1000Compound propositions example
+
+Use de Morgan's laws to find the negation of each of the following
+
+statements.  Give your answers in simple English. 
+
+Peter has long hair and he is not wearing a coat.
+
+David plays guitar and likes tennis.
+
+49
+
+Compound propositions example
+
+Use de Morgan's laws to find the negation of each of the following
+
+statements.  Give your answers in simple English. 
+
+Peter has long hair and he is not wearing a coat.
+
+Peter does not have long hair or he is wearing a coat.
+
+David plays guitar and likes tennis.
+
+50
+
+Compound propositions example
+
+Use de Morgan's laws to find the negation of each of the following
+
+statements.  Give your answers in simple English. 
+
+Peter has long hair and he is not wearing a coat.
+
+Peter does not have long hair or he is wearing a coat.
+
+David plays guitar and likes tennis.
+
+David does not play guitar or he does not like tennis.
+
+51
+
+The Laws of Propositional Logic
+
+We frequently need to simplify logical expressions or to check whether
+
+given logical expressions are logically equivalent.  
+
+One way to do these things is to use the laws of logic.  
+
+For our purposes the most important laws are the distributive laws and
+
+de Morgan's laws.  
+
+Distributive Laws 
+
+p  (q  r) ≡ (p  q)  (p  r)
+
+p  (q  r) ≡ (p  q)  (p  r)
+
+De Morgan’s Laws
+
+(p  q) ≡ p  q
+
+(p  q) ≡ p  q
+
+52
+
+The Laws of Propositional Logic
+
+We frequently need to simplify logical expressions or to check whether
+
+given logical expressions are logically equivalent.  
+
+One way to do these things is to use the laws of logic.  
+
+For our purposes the most important laws are the distributive laws and
+
+de Morgan's laws.  
+
+Distributive Laws 
+
+p  (q  r) ≡ (p  q)  (p  r)
+
+p  (q  r) ≡ (p  q)  (p  r)
+
+De Morgan’s Laws
+
+(p  q) ≡ p  q
+
+(p  q) ≡ p  q
+
+A bit like when we do
+2 x (4 + 5) = (2 x 4) + (2 x 5)
+
+53
+
+Conditional statements
+
+In computing we often use statements of the form "If … then …" to mean 
+that if particular conditions are satisfied then certain consequences should 
+follow. 
+
+A proposition of the form "If p then q" is called a conditional statement,
+and is represented by p → q.
+
+The symbolic statement is usually read as "if p then q" or as "p implies q".
+
+Truth table:
+
+p q p → q 
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+54
+
+Conditional statements
+
+In computing we often use statements of the form "If … then …" to mean 
+that if particular conditions are satisfied then certain consequences should 
+follow. 
+
+A proposition of the form "If p then q" is called a conditional statement,
+and is represented by p → q.
+
+The symbolic statement is usually read as "if p then q" or as "p implies q".
+
+Truth table:
+
+p q p → q 
+
+~p
+
+~p  q
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+Notice that p → q is logically 
+equivalent to p  q.
+
+55
+
+Conditional statements
+
+Example
+
+p: “I live in Perth”
+q: “I live in Western Australia”
+
+p
+
+0
+
+0
+
+1
+
+1
+
+q
+
+0
+
+1
+
+0
+
+1
+
+p → q 
+
+Interpretation
+
+1
+
+1
+
+0
+
+1
+
+“It is possible that I don’t live in Perth and I 
+don’t live in Western Australia”
+
+“It is possible that I don’t live in Perth but I 
+do live in Western Australia.”
+
+“It is impossible that I live in Perth but I do 
+not live in Western Australia.”
+
+“It is possible that I live in Perth and I live 
+in Western Australia.”
+
+56
+
+The negation of a conditional statement
+
+The negation of the conditional  p → q  is:
+
+~(p → q)  p  ~q
+
+Note that we can derive the result from De Morgan’s laws, since
+
+~(p → q)  ~ (~p  q )  (~ ~p)  (~ q)  p  ~ q 
+
+from last slide
+
+from de Morgan
+
+57
+
+p0011q0101p     q1101~(p     q)0010~q1010p    ~q0010p0011The contrapositive
+
+The contrapositive of a conditional statement p → q is the statement
+q → p.
+
+The conditional p → q and its contra-positive q → p are logically
+
+equivalent.
+
+p → q  ~q → ~p
+
+p q p → q  ~q
+
+~p ~q → ~p
+
+0 0
+
+0 1
+
+1 0
+
+1 1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+58
+
+Contrapositive example
+
+Consider the conditional statement
+
+“If I am in Perth then I am in Western Australia.”
+
+The contrapositive statement is
+
+“If it is not Tuesday, then I am not in the MAT1252 lecture.”
+
+The truth values of both statements are the same; it is impossible for 
+one to be true and the other false.
+
+59
+
+Contrapositive example
+
+Consider the conditional statement
+
+“If I am in Perth then I am in Western Australia.”
+
+The contrapositive statement is
+
+“If I am not in Western Australia, then I am not in Perth.”
+
+The truth values of both statements are the same; it is impossible for 
+one to be true and the other false.
+
+60
+
+The converse of a conditional statement
+
+p → q is a conditional statement, its converse is  q → p.
+
+These two statements may look similar, but there is no logical connection! 
+
+The two statements are completely independent of each other. 
+
+One of the most common errors in logic is to confuse a conditional
+
+statement and its converse.  
+
+CHALLENGE
+
+Find examples of statements p and q such that
+• p → q is true and q → p is true
+• p → q is true and q → p is false
+
+61
+
+Arguments
+
+An argument consists of a series of statements (called premises) and a
+conclusion such as shown below.
+
+Notice that the premises are listed one after the other and separated
+from the conclusion by a horizontal or vertical line, as appropriate.
+
+If the printer is on line and the file is 
+
+loaded then the file will be printed. 
+
+(premise) 
+
+The file is loaded.
+
+The file is not being printed.
+
+(premise)
+
+(premise)
+
+____________________________________________
+
+Therefore the printer is not on line.
+
+(conclusion)
+
+62
+
+Arguments
+
+We write an argument symbolically as 𝑃1, 𝑃2, … , 𝑃𝑛| 𝐶, where
+𝑃1, 𝑃2, … , 𝑃𝑛 are the premises and 𝐶 is the conclusion.
+
+To show that the argument 𝑃1, 𝑃2, … , 𝑃𝑛| 𝐶 is valid, we must
+check that whenever the premises 𝑃1, 𝑃2, … , 𝑃𝑛 are true that
+the conclusion 𝐶 is also true.
+
+63
+
+Arguments
+
+IF
+
+THEN
+
+Premises are all true → Conclusion is true
+
+To show that an argument is valid, you must show that for 
+EVERY row in the truth table where the premises are all 
+true, that the conclusion is true.
+
+To show that an argument is not valid, you must find AT 
+LEAST ONE row in the truth table where:
+•The premises are all true
+•The conclusion is false.
+
+64
+
+Arguments
+
+IF
+
+THEN
+
+Premises are all true → Conclusion is true
+
+Note that:
+•
+
+•
+
+If the truth table has no rows where the premises are all 
+true, then the argument is valid.
+In the rows of the truth table where the premises are all 
+true, if you find that in some of them the conclusion is 
+true and in others the conclusion is false, the argument 
+is not valid.
+
+65
+
+Arguments
+
+Example 1
+
+Test the validity of the argument: p → (q  r), q, r  |  p
+
+There is only one row in which the premises are all true, and in this row
+the conclusion is also true. Therefore the argument is valid.
+
+66
+
+p00001111q00110011r01010101p      (q    ~r)11110010~r10101010q     ~r00100010~p11110000premprempremconcArguments
+
+Example 2
+
+Test the validity of the argument:    p  q,  p → ~r,  ~r  |  p
+
+There are three rows in which all the premises are true, but in one of
+these the conclusion is false.  Therefore the argument is not valid.
+
+67
+
+p00001111q00110011r01010101p      ~r11111010~r10101010p     q00111111premprempremconcchecknoyesyesToday’s Lecture Objectives
+
+After completing this section, students should be able to:
+
+•
+
+translate from a verbal statement into a symbolic statement, and
+vice versa
+
+• construct truth tables for logical expressions involving , ,  and
+
+→
+
+• use truth tables to establish logical equivalence of expressions
+• use the distributive laws and de Morgan's laws
+•
+•
+• use a truth table to establish the validity of an argument
+
+find the negations of statements involving  and 
+find the negations of conditional statements
+
+68
+
+The End
+
+69
+
+

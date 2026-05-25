@@ -1,0 +1,825 @@
+Lecture 04
+Karnaugh Maps and 
+Applications 
+
+1
+
+Outline
+
+01. Karnaugh maps  
+
+02. 3-variable Karnaugh maps
+
+03. 4-variable Karnaugh maps
+
+04. Minimal sum of products 
+
+05. SOPs, CSOPs and Min SOPs 
+
+06. Finding Min SOPs from K-maps
+
+07. Design Problem Type 1: From truth table to circuit 
+
+08. Design Problem Type 2: Simplifying a given circuit 
+
+09. Application: 7-segment display
+
+10. NAND gate 
+
+11. The universality of NANDs
+
+12. Converting an AND-OR circuit to NANDs only 
+
+2
+
+Lecture’s Major Objectives
+
+•
+
+•
+
+•
+
+After completing this section, students should be able to:
+use a Karnaugh map to find a minimal sum of 
+products
+given a sum of products, draw the corresponding 
+Karnaugh map
+given a truth table, construct the corresponding 
+Karnaugh map
+design a circuit specified by a truth table
+given a circuit, design a simpler equivalent circuit
+given a sum of products, find an equivalent 
+expression using NANDs
+given an AND-OR circuit, draw an equivalent NAND 
+circuit
+
+•
+•
+•
+
+•
+
+3
+
+Karnaugh maps 
+
+• A Karnaugh map is another way of representing 
+
+Boolean expressions.
+
+• A Karnaugh map (K-map) contains the same 
+
+information as a truth table.  
+
+• Karnaugh maps are used to simplify Boolean 
+
+expressions so that they can be implemented in 
+circuits using the smallest number of logic gates.
+• Karnaugh maps are arranged as a grid, which 
+makes it easier to spot patterns in expressions.
+• We will consider 3-variable and 4-variable Karnaugh 
+
+maps. 
+
+4
+
+Karnaugh maps 
+
+A typical 3-variable Karnaugh map is represented as:
+
+x
+
+x
+
+0
+
+1
+
+y
+
+y
+
+1
+
+x′yz
+011
+
+xyz
+111
+
+1
+
+0
+
+0
+
+x′y′z′
+000
+
+x′y′z
+001
+
+xy′z′
+100
+
+0
+
+z
+
+xy′z
+101
+
+1
+
+z
+
+1
+
+x′yz′
+010
+
+xyz′
+110
+
+0
+
+z
+
+5
+
+3-variable Karnaugh maps
+
+A simple way to understand K-maps is to consider rows and columns
+and the products that they represent.
+
+First we look at the rows. The bottom row of cells represents x and the
+top row represents x', as shown in the figures.
+
+6
+
+1111xThis row represents xyzx1111This row represents x'zy3-variable Karnaugh maps
+
+7
+
+11111111xxzzyyThese columnsrepresents yThese columnsrepresents y'11111111xxzzyyThese columnsrepresents zThese columnsrepresents z'1111xxzzyyThis columnrepresents yzThis columnrepresents yz'1111xxzzyyThis columnrepresents y'zThis columnrepresents y'z'3-variable Karnaugh maps
+
+Example
+
+8
+
+1xzyThis single cellrepresents xyz'1xzy1The intersectionrepresents x'z'1xzyThe intersectionrepresents xy11xzyThe intersectionrepresents xyz1xzyThe intersectionrepresents x'yz1xzyThe intersectionrepresents x'z11xzyThe intersectionrepresents x'y13-variable Karnaugh maps
+
+Example
+
+9
+
+1xzyThe intersectionrepresents xy'z1xzyThe intersectionrepresents x'y'z'4-variable Karnaugh maps
+
+We will consider rows and columns:
+
+10
+
+yzxw11111111Those rowsrepresent wyzwThose rowsrepresent w'11111111yzxwThose rowsrepresent x11111111yzxwThose rowsrepresent x'11111111yzxwThis row representwx1111yzxwThis row representw'x'1111yzxwThis row representw'x1111yzxwThis row representwx'11114-variable Karnaugh maps
+
+11
+
+yzxwThese columnsrepresent y11111111yzxwThese columnsrepresent y'11111111yzxwThese columnsrepresent z11111111yzxwThese columnsrepresent z'11111111yzxwThis columnrepresents yz1111yzxwThis columnrepresents yz'1111yzxwThis columnrepresents y'z1111yzxwThis columnrepresents y'z'11114-variable Karnaugh maps
+
+Example
+
+12
+
+yzxwThese 2 cellsrepresent w'yz11yzxwThese 4 cellsrepresent w'y1111yzxwThese 4 cellsrepresent x'y'1111yzxwThese 4 cellsrepresent x'z'1111yzxwThese 2 cellsrepresent xy'z11yzxwThese 2 cellsrepresent wxz'11yzxwThis cell representwx'yz'1Aim of Karnaugh maps
+
+We want to be able to take a Karnaugh map and 
+represent it as a Boolean expression
+
+In this expression, we want to group variables into 
+
+As large a group as possible 
+•
+• With the fewest possible groups
+• With each group containing 𝟐𝒏 cells where 𝑛 ϵ ℤ.
+
+13
+
+4-variable Karnaugh maps
+
+Example 1:
+Find the Boolean product represented by the K-map below
+
+The row represents wx' and the columns represent y. 
+
+So the product is wx'y.
+
+14
+
+1yzxw11yzxw14-variable Karnaugh maps
+
+Example 2: 
+Find the Boolean product represented by the K-map below
+
+15
+
+1yzxw111Answer: xy'1yzxw1114-variable Karnaugh maps
+
+Example 2: 
+Find the Boolean product represented by the K-map below
+
+16
+
+1yzxw111Answer: xy'1yzxw1114-variable Karnaugh maps
+
+Example 3: 
+Find the Boolean product represented by the K-map below
+
+17
+
+1yzxw111Answer: xz'1yzxw1114-variable Karnaugh maps
+
+Example 3: 
+Find the Boolean product represented by the K-map below
+
+18
+
+1yzxw111Answer: xz'1yzxw1114-variable Karnaugh maps
+
+Example 4: 
+Find the Boolean sum of products represented by the K-map below
+
+19
+
+1yzxw11111111111Answer: x + z'4-variable Karnaugh maps
+
+Example 4: 
+Find the Boolean sum of products represented by the K-map below
+
+20
+
+1yzxw11111111111Answer: x + z'4-variable Karnaugh maps
+
+Example 5: 
+Find the Boolean sum of products represented by the K-map below
+
+21
+
+1yzxw111Answer: wy + xz + w'y'1111114-variable Karnaugh maps
+
+Example 6: 
+Find the Boolean sum of products represented by the K-map below
+
+22
+
+1yzxw111xy' + w'yz' + wx'yz1114-variable Karnaugh maps
+
+Example 7: 
+Find the Boolean sum of products represented by the K-map below
+
+23
+
+1yzxw11x' + w'y'z + wyz11111114-variable Karnaugh maps
+
+Example 8: 
+Find the Boolean sum of products represented by the K-map below
+
+24
+
+1yzxw1wxy + w'y'z + w'x'z'11114-variable Karnaugh maps
+
+Example 9: 
+Find the Boolean sum of products represented by the K-map below
+
+25
+
+Minimal sum of products 
+
+Our aim is to find the simplest possible expression that is 
+still a sum of products.  
+
+We want a sum of products with the fewest terms and with 
+the fewest variables.  
+
+Such an expression is called a minimal sum of products 
+(Min SOP), and the corresponding circuit is called a minimal 
+AND-OR circuit.
+
+26
+
+Minimal sum of products 
+
+For example, the expression
+
+xyz  +  xyz'  +  xy'z
+
+is a sum of products, and it can be simplified via
+
+xyz +  xyz'  +  xy'z =  xyz +  xyz'  +  xy'z +  xyz
+
+=  xy(z  +  z')  +  xz(y  +  y') 
+
+= xy +  xz
+
+And xy +  xz is a Min SOP.
+
+Notice that we will not simplify further to x(y + z) because this is no
+longer a SOP.
+
+27
+
+SOPs,  CSOPs  and  Min SOPs 
+
+A SOP is simply an expression consisting of products of 
+variables (with or without complements) added together.  
+
+A CSOP is an expression that has been expanded into its 
+fundamental  products. (Uniquely defined.)
+
+A Min SOP is an expression that has been simplified so as 
+to consist of the fewest possible terms and variables, 
+and still remains a SOP.  (Not uniquely defined.)
+
+So, at one end of the spectrum we have a CSOP, and at the 
+other end we have a Min SOP. 
+
+28
+
+SOPs,  CSOPs  and  Min SOPs 
+
+For example, consider the expression wyz + w'yz + w'xyz'.
+
+(i)  We can expand it to
+
+w(x+x')yz + w'(x+x')yz + w'xyz'
+
+= wxyz + wx'yz + w'xyz + w'x'yz + w'xyz'  
+
+(CSOP)
+
+(ii)  Or we can simplify it to
+
+(w+w)yz + w'xyz = yz + wxyz
+
+= (1+wx)yz + wxyz = yz + wxyz + wxyz = yz + (wxy)(z+z) 
+
+= yz + w'xy
+
+(Min SOP)
+
+29
+
+SOPs,  CSOPs  and  Min SOPs 
+
+5 fundamental products 
+wxyz + wx'yz + w'xyz + 
+w'x'yz + w'xyz' 
+
+Two groups yz + w'xy
+
+30
+
+yzxw15 fundamentals product111111111yzxw12 gropus yz and w'xy1111Typical design problems 
+
+We are concerned with two types of problems:
+
+• Given the specifications for a circuit in the form of a truth table
+
+design the simplest circuit to meet the specifications.
+
+• Given a circuit, design a simpler circuit that performs the same way.
+
+31
+
+truth tablecircuitexpressionK-mapsimple expressionsimple circuitWe need to lookat this stepFinding Min SOPs from K-maps 
+
+Given a K-map we need to be able to find the corresponding Min SOP.
+To do this we look for groups of cells that correspond to products with
+as few variables as possible.
+
+So remember:
+
+• Look for groups that are  4 x 2,  4 x 1,  2 x 2,  2 x 1
+
+(because products involve only powers of 2).
+
+• Make groups as large as possible
+
+(the larger the group, the simpler the product).
+
+• Overlap groups if possible
+
+(without introducing redundancy).
+
+• Don't forget the "split groups"
+
+(with cells at opposite edges of the K-map).
+
+32
+
+Finding Min SOPs from K-maps 
+
+Examples of incorrect and correct grouping of cells 
+
+33
+
+xxzzyyMake groups as large as possible11111111Finding Min SOPs from K-maps 
+
+Examples of incorrect and correct grouping of cells 
+
+Look for powers of 2
+(The first grouping is impossible!)
+
+34
+
+xxzzyyLook for power of 2111111Finding Min SOPs from K-maps 
+
+Examples of incorrect and correct grouping of cells 
+
+35
+
+xxzzyyOverlap if possible111111Finding Min SOPs from K-maps 
+
+Examples of incorrect and correct grouping of cells 
+
+36
+
+xxzzyyDon't forget the "split groups"11111111Examples of finding Min SOPs from K-maps 
+
+Example 1:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+37
+
+xzy111Examples of finding Min SOPs from K-maps 
+
+Example 1:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+38
+
+xzy111xzyxz' + y'z'111Examples of finding Min SOPs from K-maps 
+
+Example 2:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+39
+
+xzy111Examples of finding Min SOPs from K-maps 
+
+Example 2:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+xz + yz
+
+40
+
+xzy111xzyxz + yz111Examples of finding Min SOPs from K-maps 
+
+Example 3:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+41
+
+xzy111111Examples of finding Min SOPs from K-maps 
+
+Example 3:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+x + y
+
+42
+
+x + yxzy111111xzy111111Examples of finding Min SOPs from K-maps 
+
+Example 4:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+43
+
+xzy111111Examples of finding Min SOPs from K-maps 
+
+Example 4:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+y + z
+
+44
+
+y' + zxzy111111xzy111111Examples of finding Min SOPs from K-maps 
+
+Example 5:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+45
+
+yzxw111111Examples of finding Min SOPs from K-maps 
+
+Example 5:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+46
+
+yzxw111111yzxw111111wy + wx'Examples of finding Min SOPs from K-maps 
+
+Example 6:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+47
+
+yzxw1111111111Examples of finding Min SOPs from K-maps 
+
+Example 6:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+48
+
+yzxw111111wz + yz' + w'z'yzxw11111111111111Examples of finding Min SOPs from K-maps 
+
+Example 6:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+49
+
+yzxw111111wz + wy + w'z'yzxw11111111111111Examples of finding Min SOPs from K-maps 
+
+Example 7:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+50
+
+yzxw1111111Examples of finding Min SOPs from K-maps 
+
+Example 7:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+51
+
+yzxw111wxz + w'xy + x'yz' + w'x'y'z11111yzxw1111111Examples of finding Min SOPs from K-maps 
+
+Example 8:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+52
+
+yzxw11111111Examples of finding Min SOPs from K-maps 
+
+Example 8:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+53
+
+yzxw111xz + xy + wy11111yzxw11111111Examples of finding Min SOPs from K-maps 
+
+Example 9:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+54
+
+yzxw11111111Examples of finding Min SOPs from K-maps 
+
+Example 9:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+55
+
+yzxw111w'x' + xz'11111yzxw11111111Examples of finding Min SOPs from K-maps 
+
+Example 10:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+56
+
+yzxw1111111Examples of finding Min SOPs from K-maps 
+
+Example 10:
+
+Find the Min SOP corresponding to the Karnaugh map:
+
+57
+
+yzxw11w'xz + wz' + x'y'z'11111yzxw1111111Design Problem Type 1: From truth table to circuit 
+
+The specifications of a circuit are given in a truth table. The task is to
+design a circuit with output as specified in the truth table.
+
+The steps are:
+
+1.
+
+from the truth table obtain a Boolean expression;
+
+2. construct a Karnaugh map;
+
+3.
+
+find a corresponding Min SOP;
+
+4. draw the minimal AND-OR circuit.
+
+58
+
+Design Problem Type 1: From truth table to circuit 
+
+Example
+
+Design a minimal AND-OR circuit to give the output P as shown in the
+
+truth table:
+
+59
+
+x00001111y00110011z01010101P01111010Design Problem Type 1: From truth table to circuit 
+
+Example
+
+Design a minimal AND-OR circuit to give the output P as shown in the
+
+truth table:
+
+Solution:   
+
+From the truth table, the CSOP is:
+
+P = x'y'z + x'yz' + x'yz + xy'z' + xyz'
+
+60
+
+x00001111y00110011z01010101P01111010Design Problem Type 1: From truth table to circuit 
+
+Example
+
+Design a minimal AND-OR circuit to give the output P as shown in the
+
+truth table:
+
+Solution:   
+
+From the truth table, the CSOP is:
+
+P = x'y'z + x'yz' + x'yz + xy'z' + xyz'
+
+61
+
+x00001111y00110011z01010101P01111010xzy11111P = x'z + x'y + xz'Design Problem Type 1: From truth table to circuit 
+
+Example (continued)
+
+62
+
+xzy11111P = x'z + x'y + xz'xyzPDesign Problem Type 2: Simplifying a given circuit 
+
+A logical circuit is given, and the task is to produce a simpler circuit
+with the same output.  
+
+The steps are:
+
+1.
+
+from the given circuit obtain a Boolean expression;
+
+2. construct a Karnaugh map;
+
+3.
+
+find a corresponding Min SOP;
+
+4. draw the minimal AND-OR circuit.
+
+63
+
+Design Problem Type 2: Simplifying a given circuit 
+
+Example:
+
+Design a minimal AND-OR circuit that does the same job as this circuit: 
+
+64
+
+xyzRDesign Problem Type 2: Simplifying a given circuit 
+
+Example (solution):
+
+From the circuit, the Boolean expression is:
+
+R = (y' + z)x' + (x + z')y = x'y' + x'z + xy + yz' 
+
+65
+
+xzy11111R = y + x'1xyRApplication: 7-segment display 
+
+Some digital devices such as calculators, microwaves, clocks, etc. use
+a 7-segment display, in which each number is represented by 7 light-
+emitting diodes (LEDs) arranged like this:
+
+When a numeric key (0, 1, 2, …, 9) is pressed, the appropriate lights
+come on. For example if key 5 is pressed, the display is shown above.
+
+66
+
+Application: 7-segment display 
+
+Decimal digits display on 7-segment display:
+
+67
+
+Application: 7-segment display 
+
+To display decimal digits we have to design seven “segment decoder”
+circuits. That is, we will need a different circuit for each of the segments
+on the display.
+
+Using binary numbers 
+(See Week 8!) we can 
+code the numbers 0-9 
+using 4 digits, e.g. 5 = 
+0101, 8=1000.
+
+68
+
+abcdefgseven_segment_decoderabcdefgwxyzBCDcodesegmentsApplication: 7-segment display 
+
+Seven segment decoder truth table:
+
+Seg e = w'x'y'z' + w'x'yz' + w'xyz' + wx'y'z‘
+
+Min SOP for seg e = x'y'z' + w'yz' – Karnaugh map
+
+69
+
+x0000111100y0011001100z0101010101aw0000000011key0123456789bcde1010001010fginputsoutputsyzxw1111abcdefgNAND gate 
+
+A NAND gate has two or more inputs. Its output is the negation of the
+product of the inputs. So it is the negation of AND.
+
+One reason why a NAND gate is important is that it is a "universal
+gate", which means that a logic circuit can be made entirely from
+NANDs, as we shall see shortly.
+
+70
+
+2inNAND3inNAND5inNANADx0011y0101(x  y)'1110y00110011z01010101(x  y  z)'11111110x00001111The universality of NANDs
+
+We can construct a circuit entirely from NANDs because we can
+construct AND, OR and NOT gates from NANDs, as shown below.
+
+Therefore, in any AND-OR circuit, the AND, OR and NOT gates can be
+replaced by appropriate combinations of NANDs.
+
+So a NAND is called a "universal gate".
+
+71
+
+NOTANDORConverting an AND-OR circuit to NANDs only 
+
+One way to convert an AND-OR circuit to one that uses only NANDs is
+to replace each AND, OR and NOT by the equivalent NAND circuit, and
+then simplify where possible.
+
+A simpler algebraic method uses de Morgan's laws.
+
+We begin with the sum of products that represents the circuit.
+
+We negate this expression twice and then use de Morgan's law on the
+inner negation to obtain an expression in terms of NANDs.
+
+72
+
+Converting an AND-OR circuit to NANDs only 
+
+Example:
+
+Suppose we want to change the sum of products 
+
+L = xy'z + x'y
+
+into an expression in terms of NANDs. We negate the expression
+twice, and use de Morgan's law on the inner negation:
+L = (xy'z + x'y) = [(xy'z + x'y)']' = [(xy'z)'(x'y)']'
+
+73
+
+xyzLThe End
+
+74
+
+
